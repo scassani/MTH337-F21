@@ -48,8 +48,8 @@ Instructor
 | Simone Cassani
 | **Office:** 321 Mathematics Building
 | **E-mail:** `scassani@buffalo.edu <scassani@buffalo.edu>`_
-| **Office Hours:** R 12:00 PM - 2:00 PM in my office ,and by appointment. 
-|                   I will be also available on discord for online office hours.
+| **Office Hours:** R 12:00 PM - 2:00 PM in my office, and by appointment. 
+|                   I will be also available by appointment for online office hours on the discord class channel.
 |
 
 
@@ -160,7 +160,7 @@ Useful Information
 **Important Dates:**
 	
    * Aug 30: first day of classes
-   * Sspt. 7: last day to drop/add
+   * Sept. 7: last day to drop/add
    * Nov. 12: last day to resign
    * Dec. 10: last day of classes
 

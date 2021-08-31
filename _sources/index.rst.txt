@@ -48,8 +48,7 @@ Instructor
 | Simone Cassani
 | **Office:** 321 Mathematics Building
 | **E-mail:** `scassani@buffalo.edu <scassani@buffalo.edu>`_
-| **Office Hours:** R 12:00 PM - 2:00 PM in my office, and by appointment. 
-|                   I will be also available by appointment for online office hours on the discord class channel.
+| **Office Hours:** R 12:00 PM - 2:00 PM in my office, and by appointment. **On discord class server**
 |
 
 
@@ -82,7 +81,7 @@ distribution since it includes Jupyter notebook and several Python modules we wi
     * `numpy documentation <http://docs.scipy.org/doc/numpy/>`_. Numpy is the main scientific computing module of Python.
       We will use it extensively.
 
-`Discord <http://www.discord.com>`_ The class discord server will be used as a message board for questions concerning this course.
+`Discord <http://www.discord.com>`_ **Discord will be used as a platform for office hours.** The class discord server will also be used as a message board for questions concerning this course.
 If you have such a question please post it on Discord instead of e-mailing me. In this way other students who may have the same problem will benefit. If you know the answer to a question somebody else posted on Discord please answer it.
 Do not use Discord for personal matters (concerning your grade etc.), e-mail me directly with such issues.
 

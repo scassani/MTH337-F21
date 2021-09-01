@@ -34,7 +34,7 @@ Python
 
 Reminder: Weekly Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~
-The weekly summary google form is due on Friday Sept. 3 at midnight, and is available **here**
+The weekly summary google form is due on Friday Sept. 3 at midnight, and is available `**here** <https://forms.gle/7yKJRoo3YBERUkwL8>`_
 
 
 Week 1 notebook

@@ -1,0 +1,42 @@
+Week 2: Sept 7 - 10
+===================
+
+
+Python
+~~~~~~
+
+* :doc:`Lists and "for" loops </PT/PT-lists>`
+* ``range()``
+* Fine-tuning loops: ``break`` and ``continue``
+* :doc:`Functions </PT/PT-functions>`
+* Logical operators: ``not``, ``and``, ``or``
+* The ``while`` loop
+* Basic plotting
+
+
+Mathematics
+~~~~~~~~~~~
+
+* Divisors
+* Sequences
+
+Project 1
+~~~~~~~~~
+
+Due: Friday, September 17, 11:59 PM.
+
+* :doc:`A particular sequence </Projects/part_sequence/part_sequence>`.
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Week 2 notebook
+~~~~~~~~~~~~~~~
+
+
+
+Sample quiz 3
+~~~~~~~~~~~~~
+
+

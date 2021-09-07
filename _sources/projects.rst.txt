@@ -6,4 +6,4 @@ Projects
    :titlesonly:
    :maxdepth: 2
 
-	This page will host the project descriptions
+	A Particular Sequence <Projects/part_sequence/part_sequence>

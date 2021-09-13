@@ -1,0 +1,35 @@
+Week 3: Sept 13-17
+===================
+
+
+Python
+~~~~~~
+
+* :doc:`List indexing and slicing </PT/PT-lists>`
+* :doc:`Plotting with Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`
+* :doc:`Mutable and immutable objects </PT/PT-mutable_vs_immutable/PT-mutable_vs_immutable>`
+* :doc:`Functions: positional, keyword, and default arguments </PT/PT-functions>`
+
+
+Project 1
+~~~~~~~~~
+
+Due: Friday, Sept 17, 11:59 PM.
+
+* :doc:`A particular sequence </Projects/part_sequence/part_sequence>`.
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Week 3 notebook
+~~~~~~~~~~~~~~~
+
+
+
+Sample quiz 4
+~~~~~~~~~~~~~
+
+

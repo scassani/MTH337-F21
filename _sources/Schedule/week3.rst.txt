@@ -14,7 +14,7 @@ Python
 Project 1
 ~~~~~~~~~
 
-Due: Friday, Sept 17, 11:59 PM.
+Due: Tuesday, Sept ,21 11:59 PM.
 
 * :doc:`A particular sequence </Projects/part_sequence/part_sequence>`.
 
@@ -28,9 +28,10 @@ The weekly summary google form is due on Sunday Sept. 19 at midnight, and is ava
 Week 3 notebook
 ~~~~~~~~~~~~~~~
 
-
+- `View online <../_static/week03_in_class.html>`_
+- `Download  <../_static/week03_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 4
 ~~~~~~~~~~~~~
 
-
+- :download:`Sample Quiz 4 <../Sample_Quizzes/quiz4/quiz4_sample.pdf>`

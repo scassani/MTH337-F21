@@ -1,0 +1,48 @@
+Is there room ... ?
+======================
+
+.. rubric:: due: Friday, Oct. 1, 11:59 PM
+
+Consider a circle :math:`\mathcal{C}` with area :math:`\mathcal{A}` and a collection of circles :math:`\{C_1,C_2,C_3,...\}`  with area 
+
+.. math:: A_1>A_2>A_3>\ldots. \text{ and } \mathcal{A}>A_1 
+
+We would like to sequentially place each of this circles at **random coordinates** in such a way that
+
+* the circle is inside :math:`\mathcal{C}`  
+* the circle is disjoint from any of the other circles previously placed inside :math:`\mathcal{C}`
+
+.. figure:: fig1.svg
+   :width: 800px
+   :align: center
+
+   *1 to 20 small circles*
+
+The placement should (theoretically) be possible if :math:`A_1+A_2+A_3+\ldots\leq \mathcal{A}`.
+
+For this project we will look at some specific formula for the relationshinp governing the area of the *n-th* circle. First we will choose a convergent series 
+
+.. math:: \sum_{n=1}^\infty a_n
+
+The area :math:`A_n` will correspond to the *n-th* term of the series :math:`a_n`, and the area :math:`\mathcal{A}` will be the sum of the series. 
+
+We will focus on convergent series that have an explicit formula for their sum, **Geometric series** and **p-series**.
+
+* *Geometric series* are convergent if :math:`p<1` and their sum is equal to:
+
+.. math:: \sum_{n=1}^\infty p^n=\dfrac{p}{1-p}, \text{ for } p<1
+
+For example, if :math:`p=\dfrac{1}{2}`, then :math:`\sum_{n=1}^\infty \left(\dfrac{1}{2}\right)^n=1`
+
+* *P-series* are convergent if :math:`p>1` and their sum is equal to the *zeta function* :math:`\zeta(p)` 
+
+.. math:: \sum_{n=1}^\infty \dfrac{1}{n^p}=\zeta(p), \text{ for } p>1
+
+For example, if :math:`p=2`, then :math:`\sum_{n=1}^\infty \dfrac{1}{n^2}=\zeta(2)\simeq 1.64493`
+
+Project
+-------
+
+Explore how the value of **p** will affect the circle placement inside of :math:`\mathcal{C}`. Are there some values of the parameter for which the process seems to continue indefinetly? Analyze and give an explanation for the obtained results.
+
+

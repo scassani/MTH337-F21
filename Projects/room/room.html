@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Is there room … ? &#8212; MTH337_F21  documentation</title>
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Is there room … ?</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Is there room … ?</a><ul>
+<li><a class="reference internal" href="#project">Project</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/Projects/room/room.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Docs</a></li>
+              
+              <li>Is there room … ?</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="is-there-room">
+<h1>Is there room … ?<a class="headerlink" href="#is-there-room" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">due: Friday, Oct. 1, 11:59 PM</p>
+<p>Consider a circle <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> with area <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> and a collection of circles <span class="math notranslate nohighlight">\(\{C_1,C_2,C_3,...\}\)</span>  with area</p>
+<div class="math notranslate nohighlight">
+\[A_1&gt;A_2&gt;A_3&gt;\ldots. \text{ and } \mathcal{A}&gt;A_1\]</div>
+<p>We would like to sequentially place each of this circles at <strong>random coordinates</strong> in such a way that</p>
+<ul class="simple">
+<li><p>the circle is inside <span class="math notranslate nohighlight">\(\mathcal{C}\)</span></p></li>
+<li><p>the circle is disjoint from any of the other circles previously placed inside <span class="math notranslate nohighlight">\(\mathcal{C}\)</span></p></li>
+</ul>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/fig1.svg"><img alt="../../_images/fig1.svg" src="../../_images/fig1.svg" width="800px" /></a>
+<p class="caption"><span class="caption-text"><em>1 to 20 small circles</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The placement should (theoretically) be possible if <span class="math notranslate nohighlight">\(A_1+A_2+A_3+\ldots\leq \mathcal{A}\)</span>.</p>
+<p>For this project we will look at some specific formula for the relationshinp governing the area of the <em>n-th</em> circle. First we will choose a convergent series</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty a_n\]</div>
+<p>The area <span class="math notranslate nohighlight">\(A_n\)</span> will correspond to the <em>n-th</em> term of the series <span class="math notranslate nohighlight">\(a_n\)</span>, and the area <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> will be the sum of the series.</p>
+<p>We will focus on convergent series that have an explicit formula for their sum, <strong>Geometric series</strong> and <strong>p-series</strong>.</p>
+<ul class="simple">
+<li><p><em>Geometric series</em> are convergent if <span class="math notranslate nohighlight">\(p&lt;1\)</span> and their sum is equal to:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty p^n=\dfrac{p}{1-p}, \text{ for } p&lt;1\]</div>
+<p>For example, if <span class="math notranslate nohighlight">\(p=\dfrac{1}{2}\)</span>, then <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \left(\dfrac{1}{2}\right)^n=1\)</span></p>
+<ul class="simple">
+<li><p><em>P-series</em> are convergent if <span class="math notranslate nohighlight">\(p&gt;1\)</span> and their sum is equal to the <em>zeta function</em> <span class="math notranslate nohighlight">\(\zeta(p)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty \dfrac{1}{n^p}=\zeta(p), \text{ for } p&gt;1\]</div>
+<p>For example, if <span class="math notranslate nohighlight">\(p=2\)</span>, then <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \dfrac{1}{n^2}=\zeta(2)\simeq 1.64493\)</span></p>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>Explore how the value of <strong>p</strong> will affect the circle placement inside of <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>. Are there some values of the parameter for which the process seems to continue indefinetly? Analyze and give an explanation for the obtained results.</p>
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Is there room … ?</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2021, Simone Cassani. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

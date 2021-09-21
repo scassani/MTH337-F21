@@ -1,0 +1,31 @@
+Week 4: Sept 20-24
+===================
+
+Project 2
+~~~~~~~~~
+
+* :doc:`Is there room ... ? </Projects/room/room>`.
+
+Python
+~~~~~~
+
+* :doc:`Plotting with Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`
+* :doc:`List comprehensions </PT/PT-list_comprehensions/PT-list_comprehensions>`
+* :doc:`Mutable and immutable objects </PT/PT-mutable_vs_immutable/PT-mutable_vs_immutable>`
+* :doc:`Functions: positional, keyword, and default arguments </PT/PT-functions>`
+* random numbers
+* :doc: `Subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
+
+Mathematics
+~~~~~~~~~~~
+
+* Series
+
+Week 4 notebook
+~~~~~~~~~~~~~~~
+
+
+Sample quiz 
+~~~~~~~~~~~~~
+
+

@@ -20,12 +20,19 @@ Mathematics
 ~~~~~~~~~~~
 
 * Series
+* Circle properties
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is due on Sunday Sept. 26 at midnight, and is available `**here** <https://forms.gle/BNAQEQieCCCaSgW57>`_
+
 
 Week 4 notebook
 ~~~~~~~~~~~~~~~
 
 
-Sample quiz 
+
+Sample quiz 4
 ~~~~~~~~~~~~~
 
-
+- :download:`Sample Quiz 4 <../Sample_Quizzes/quiz4/quiz4_sample.pdf>`

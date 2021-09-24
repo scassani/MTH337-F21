@@ -13,8 +13,8 @@ Python
 * :doc:`List comprehensions </PT/PT-list_comprehensions/PT-list_comprehensions>`
 * :doc:`Mutable and immutable objects </PT/PT-mutable_vs_immutable/PT-mutable_vs_immutable>`
 * :doc:`Functions: positional, keyword, and default arguments </PT/PT-functions>`
+* :doc:`Subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
 * random numbers
-* :doc: `Subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
 
 Mathematics
 ~~~~~~~~~~~
@@ -30,7 +30,8 @@ The weekly summary google form is due on Sunday Sept. 26 at midnight, and is ava
 Week 4 notebook
 ~~~~~~~~~~~~~~~
 
-
+- `View online <../_static/week04_in_class.html>`_
+- `Download  <../_static/week04_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 4
 ~~~~~~~~~~~~~

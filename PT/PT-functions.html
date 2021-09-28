@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
@@ -15,18 +16,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Functions &#8212; MTH337_F21  documentation</title>
-    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/guzzle.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Matplotlib subplots and axes objects" href="PT-matplotlib_subplots/PT-matplotlib_subplots.html" />
+    <link rel="prev" title="Mutable vs. immutable objects" href="PT-mutable_vs_immutable/PT-mutable_vs_immutable.html" />
   
    
 
@@ -37,7 +37,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PT-matplotlib_subplots/PT-matplotlib_subplots.html" title="Matplotlib subplots and axes objects"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PT-mutable_vs_immutable/PT-mutable_vs_immutable.html" title="Mutable vs. immutable objects"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../python_tools.html" accesskey="U">Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Functions</a></li> 
       </ul>
     </div>
@@ -65,6 +72,12 @@
     </div>
   </div>
 </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="PT-mutable_vs_immutable/PT-mutable_vs_immutable.html"
+                        title="previous chapter">Mutable vs. immutable objects</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="PT-matplotlib_subplots/PT-matplotlib_subplots.html"
+                        title="next chapter">Matplotlib subplots and axes objects</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -94,15 +107,17 @@
             <ol class="breadcrumb">
               <li><a href="../index.html">Docs</a></li>
               
+                <li><a href="../python_tools.html">Python tools</a></li>
+              
               <li>Functions</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="functions">
+  <section id="functions">
 <h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="functions-basics">
+<section id="functions-basics">
 <h2>Functions basics<a class="headerlink" href="#functions-basics" title="Permalink to this headline">¶</a></h2>
 <p>Functions are a basic tool for organizing programs in Python (and in
 other programming languages). A function is essentially a block a code
@@ -156,8 +171,8 @@ the first vowel in the string:</p>
 <div class="output docutils container">
 <p>0</p>
 </div>
-</div>
-<div class="section" id="positional-and-keyword-arguments">
+</section>
+<section id="positional-and-keyword-arguments">
 <h2>Positional and keyword arguments<a class="headerlink" href="#positional-and-keyword-arguments" title="Permalink to this headline">¶</a></h2>
 <p>There are two ways to pass arguments to a function: by position and by
 keyword. For example, here is a function which computes the volume of a
@@ -231,8 +246,8 @@ to remember which position is the input and which is the output scale:</p>
 <div class="output docutils container">
 <p>53.6</p>
 </div>
-</div>
-<div class="section" id="default-values">
+</section>
+<section id="default-values">
 <h2>Default values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h2>
 <p>In the definition of a function we can give default values of some
 function arguments. These arguments can be then ommitted in function
@@ -268,8 +283,8 @@ used instead:</p>
 </div>
 <p><strong>Note.</strong> In the definition of a function arguments with default values
 must be listed after arguments without defaults.</p>
-</div>
-<div class="section" id="why-use-functions">
+</section>
+<section id="why-use-functions">
 <h2>Why use functions<a class="headerlink" href="#why-use-functions" title="Permalink to this headline">¶</a></h2>
 <p>Here are some reasons why functions are useful:</p>
 <ul class="simple">
@@ -282,12 +297,24 @@ program does if it is split into short functions.</p></li>
 easier to fix problems in a program if it is organized into
 functions.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="PT-mutable_vs_immutable/PT-mutable_vs_immutable.html" title="previous chapter (use the left arrow)">Mutable vs. immutable objects</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="PT-matplotlib_subplots/PT-matplotlib_subplots.html" title="next chapter (use the right arrow)">Matplotlib subplots and axes objects</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -297,7 +324,14 @@ functions.</p></li>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="PT-matplotlib_subplots/PT-matplotlib_subplots.html" title="Matplotlib subplots and axes objects"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PT-mutable_vs_immutable/PT-mutable_vs_immutable.html" title="Mutable vs. immutable objects"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../python_tools.html" >Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Functions</a></li> 
       </ul>
     </div>

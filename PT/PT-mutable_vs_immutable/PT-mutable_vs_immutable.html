@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,18 +16,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Mutable vs. immutable objects &#8212; MTH337_F21  documentation</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/guzzle.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Functions" href="../PT-functions.html" />
+    <link rel="prev" title="List comprehensions" href="../PT-list_comprehensions/PT-list_comprehensions.html" />
   
    
 
@@ -37,7 +37,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../PT-functions.html" title="Functions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../PT-list_comprehensions/PT-list_comprehensions.html" title="List comprehensions"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../python_tools.html" accesskey="U">Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Mutable vs. immutable objects</a></li> 
       </ul>
     </div>
@@ -65,6 +72,12 @@
     </div>
   </div>
 </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../PT-list_comprehensions/PT-list_comprehensions.html"
+                        title="previous chapter">List comprehensions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../PT-functions.html"
+                        title="next chapter">Functions</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -94,15 +107,17 @@
             <ol class="breadcrumb">
               <li><a href="../../index.html">Docs</a></li>
               
+                <li><a href="../../python_tools.html">Python tools</a></li>
+              
               <li>Mutable vs. immutable objects</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="mutable-vs-immutable-objects">
+  <section id="mutable-vs-immutable-objects">
 <h1>Mutable vs. immutable objects<a class="headerlink" href="#mutable-vs-immutable-objects" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="two-examples">
+<section id="two-examples">
 <h2>Two examples<a class="headerlink" href="#two-examples" title="Permalink to this headline">¶</a></h2>
 <p>Objects used in Python can be separated into two major categories: some
 objects are <em>mutable</em> while other objects are <em>immutable</em>. The
@@ -162,8 +177,8 @@ well even though we did not use this variable.</p>
 <p>The difference in the behavior of variables in Example 1 and Example 2
 comes from the fact that integers are immutable objects while lists are
 mutable.</p>
-</div>
-<div class="section" id="how-this-works">
+</section>
+<section id="how-this-works">
 <h2>How this works<a class="headerlink" href="#how-this-works" title="Permalink to this headline">¶</a></h2>
 <p>When a variable is a assigned to some object (a number, string, list
 etc.) the variable does not store this object, but rather a computer memory
@@ -248,8 +263,8 @@ value of <code class="docutils literal notranslate"><span class="pre">n</span></
 id(m) = 400004</p>
 </div>
 <a class="reference internal image-reference" href="../../_images/PT-mutable_vs_immutable4.svg"><img alt="../../_images/PT-mutable_vs_immutable4.svg" class="align-center" src="../../_images/PT-mutable_vs_immutable4.svg" width="400px" /></a>
-</div>
-<div class="section" id="why-it-works-this-way">
+</section>
+<section id="why-it-works-this-way">
 <h2>Why it works this way<a class="headerlink" href="#why-it-works-this-way" title="Permalink to this headline">¶</a></h2>
 <p>Lists are often very large objects, consisting of thousands or millions
 of elements. If lists were immutable changing even a single element of a
@@ -261,8 +276,8 @@ memory and can be copied to new memory locations quickly. Having
 immutable integers does not affect program efficiency in a substantial
 way, and it assures that by changing value of one integer variable we
 will not inadvertently change some other variable.</p>
-</div>
-<div class="section" id="additional-remarks">
+</section>
+<section id="additional-remarks">
 <h2>Additional remarks<a class="headerlink" href="#additional-remarks" title="Permalink to this headline">¶</a></h2>
 <p><strong>1)</strong> Some examples of immutable objects are:</p>
 <ul class="simple">
@@ -323,12 +338,24 @@ locations in the computer memory:</p>
 <div class="output docutils container">
 <p>False</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../PT-list_comprehensions/PT-list_comprehensions.html" title="previous chapter (use the left arrow)">List comprehensions</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="../PT-functions.html" title="next chapter (use the right arrow)">Functions</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -338,7 +365,14 @@ locations in the computer memory:</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../PT-functions.html" title="Functions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../PT-list_comprehensions/PT-list_comprehensions.html" title="List comprehensions"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../python_tools.html" >Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Mutable vs. immutable objects</a></li> 
       </ul>
     </div>

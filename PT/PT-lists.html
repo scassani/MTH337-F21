@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
@@ -15,18 +16,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Lists, ranges and “for” loops &#8212; MTH337_F21  documentation</title>
-    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/guzzle.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plots with matplotlib" href="PT-matplotlib_plots/PT-matplotlib_plots.html" />
+    <link rel="prev" title="Importing modules" href="PT-importing_modules.html" />
   
    
 
@@ -37,7 +37,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PT-matplotlib_plots/PT-matplotlib_plots.html" title="Plots with matplotlib"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PT-importing_modules.html" title="Importing modules"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../python_tools.html" accesskey="U">Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Lists, ranges and “for” loops</a></li> 
       </ul>
     </div>
@@ -69,6 +76,12 @@
     </div>
   </div>
 </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="PT-importing_modules.html"
+                        title="previous chapter">Importing modules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="PT-matplotlib_plots/PT-matplotlib_plots.html"
+                        title="next chapter">Plots with matplotlib</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -98,15 +111,17 @@
             <ol class="breadcrumb">
               <li><a href="../index.html">Docs</a></li>
               
+                <li><a href="../python_tools.html">Python tools</a></li>
+              
               <li>Lists, ranges and “for” loops</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="lists-ranges-and-for-loops">
+  <section id="lists-ranges-and-for-loops">
 <h1>Lists, ranges and “for” loops<a class="headerlink" href="#lists-ranges-and-for-loops" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lists">
+<section id="lists">
 <h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <p>Lists are a type of a container - they contain a number of other
 objects: numbers, strings, even other lists. A list is an ordered
@@ -180,7 +195,7 @@ elements can be added to them, replaced or deleted.</p>
 <div class="output docutils container">
 <p>True</p>
 </div>
-<div class="section" id="indexing">
+<section id="indexing">
 <h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
 <p>Individual elements of a list can be accessed using their indexes
 enclosed in square brackets. Indexing of list elements starts with 0:</p>
@@ -238,8 +253,8 @@ elements:</p>
 <div class="output docutils container">
 <p>4</p>
 </div>
-</div>
-<div class="section" id="list-slicing">
+</section>
+<section id="list-slicing">
 <h3>List slicing<a class="headerlink" href="#list-slicing" title="Permalink to this headline">¶</a></h3>
 <p>List slicing produces a new list, consisting of some elements of the
 original list. Here are some examples.</p>
@@ -289,9 +304,9 @@ by 2:</p>
 <div class="output docutils container">
 <p>[‘h’, ‘g’, ‘f’, ‘e’, ‘d’, ‘c’, ‘b’, ‘a’]</p>
 </div>
-</div>
-</div>
-<div class="section" id="strings-vs-lists">
+</section>
+</section>
+<section id="strings-vs-lists">
 <h2>Strings vs Lists<a class="headerlink" href="#strings-vs-lists" title="Permalink to this headline">¶</a></h2>
 <p>Slicing and indexing operations can be also applied to strings:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;New York City&#39;</span>
@@ -324,8 +339,8 @@ a character to a string or change a character using its index:</p>
 —-&gt; 1 s[0] = ‘A’
 TypeError: ‘str’ object does not support item assignment</p>
 </div>
-</div>
-<div class="section" id="for-loops">
+</section>
+<section id="for-loops">
 <h2>“for” loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
 <p>Python <code class="docutils literal notranslate"><span class="pre">for</span></code> loops provide a way to iterate (loop) over the items in a
 list, string, or any other iterable object, executing a block of code on
@@ -403,8 +418,8 @@ u
 f
 f</p>
 </div>
-</div>
-<div class="section" id="range">
+</section>
+<section id="range">
 <h2>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h2>
 <p>As the examples above illustrate in many situations we may need
 to iterate a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop over a sequence of consecutive integers. It
@@ -476,12 +491,24 @@ function:</p>
 <div class="output docutils container">
 <p>[1, 3, 5, 7, 9]</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="PT-importing_modules.html" title="previous chapter (use the left arrow)">Importing modules</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="PT-matplotlib_plots/PT-matplotlib_plots.html" title="next chapter (use the right arrow)">Plots with matplotlib</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -491,7 +518,14 @@ function:</p>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="PT-matplotlib_plots/PT-matplotlib_plots.html" title="Plots with matplotlib"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PT-importing_modules.html" title="Importing modules"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../python_tools.html" >Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Lists, ranges and “for” loops</a></li> 
       </ul>
     </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,18 +16,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Plots with matplotlib &#8212; MTH337_F21  documentation</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/guzzle.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="List comprehensions" href="../PT-list_comprehensions/PT-list_comprehensions.html" />
+    <link rel="prev" title="Lists, ranges and “for” loops" href="../PT-lists.html" />
   
    
 
@@ -37,7 +39,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../PT-list_comprehensions/PT-list_comprehensions.html" title="List comprehensions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../PT-lists.html" title="Lists, ranges and “for” loops"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../python_tools.html" accesskey="U">Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Plots with matplotlib</a></li> 
       </ul>
     </div>
@@ -65,6 +74,12 @@
     </div>
   </div>
 </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../PT-lists.html"
+                        title="previous chapter">Lists, ranges and “for” loops</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../PT-list_comprehensions/PT-list_comprehensions.html"
+                        title="next chapter">List comprehensions</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -94,15 +109,17 @@
             <ol class="breadcrumb">
               <li><a href="../../index.html">Docs</a></li>
               
+                <li><a href="../../python_tools.html">Python tools</a></li>
+              
               <li>Plots with matplotlib</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="plots-with-matplotlib">
+  <section id="plots-with-matplotlib">
 <h1>Plots with matplotlib<a class="headerlink" href="#plots-with-matplotlib" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="basic-plotting">
+<section id="basic-plotting">
 <h2>Basic plotting<a class="headerlink" href="#basic-plotting" title="Permalink to this headline">¶</a></h2>
 <p>We can create plots with Python using <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> module.
 First we import the module:</p>
@@ -180,8 +197,8 @@ for both axes we can use the <code class="docutils literal notranslate"><span cl
 properties of coordinate axes of a plot. See <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html?highlight=axis#matplotlib.pyplot.axis">matplotlib
 documentation</a>
 for details.</p>
-</div>
-<div class="section" id="more-plotting-options">
+</section>
+<section id="more-plotting-options">
 <h2>More plotting options<a class="headerlink" href="#more-plotting-options" title="Permalink to this headline">¶</a></h2>
 <p>By default the <code class="docutils literal notranslate"><span class="pre">plot</span></code> function joins the specified points by straight
 lines. If, instead, we want to plot individual points as red circles we
@@ -301,8 +318,8 @@ size of markers:</p>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/PT-matplotlib-6.svg"><img alt="../../_images/PT-matplotlib-6.svg" class="align-center" src="../../_images/PT-matplotlib-6.svg" width="450px" /></a>
-</div>
-<div class="section" id="plot-legend">
+</section>
+<section id="plot-legend">
 <h2>Plot legend<a class="headerlink" href="#plot-legend" title="Permalink to this headline">¶</a></h2>
 <p>If more than one graph is plotted on a single figure a legend can be
 used to label graphs:</p>
@@ -333,8 +350,8 @@ used to label graphs:</p>
 <div class="output docutils container">
 <p>1.0</p>
 </div>
-</div>
-<div class="section" id="further-reading">
+</section>
+<section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
 <p>Matplotlib is a very large module with a lot of uses. Here are a
 couple links that can be helpful for exploring it further:</p>
@@ -344,12 +361,24 @@ refrence</a></p></li>
 <li><p><a class="reference external" href="http://www.scipy-lectures.org/intro/matplotlib/matplotlib.html">A tutorial from
 scipy-lectures.org</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../PT-lists.html" title="previous chapter (use the left arrow)">Lists, ranges and “for” loops</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="../PT-list_comprehensions/PT-list_comprehensions.html" title="next chapter (use the right arrow)">List comprehensions</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -359,7 +388,14 @@ scipy-lectures.org</a></p></li>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../PT-list_comprehensions/PT-list_comprehensions.html" title="List comprehensions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../PT-lists.html" title="Lists, ranges and “for” loops"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../python_tools.html" >Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Plots with matplotlib</a></li> 
       </ul>
     </div>

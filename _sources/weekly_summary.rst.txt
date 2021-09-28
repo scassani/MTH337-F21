@@ -1,6 +1,113 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 4
+~~~~~~
+
+- Is the project still going to be due next week Friday?
+
+yes
+
+- When would it be more beneficial to return a tuple as opposed to a list? If a list can be changed, wouldn't it be better to return a list most of the time?
+
+It depends on the application. (I answered a similar question in the past weeks)
+
+- For the references section of our projects, are URLs sufficient or do we have to cite the websites in a specific way?  Why is it necessary to add 1 when using the Zeta function in Python?
+
+For the references the URL is enough, and you should also mark where you use it in the text. We need to add one, because ``zetac`` skips the first term.
+
+- One question is for next week quiz do we have to memorize all the color in making graph and all the different shape (like triangle, squre). For the project is it batter it have more math idea then have using code to test them. What happen is out mathematics idea is wrong but have suffeciant coding demonestration. 
+
+For the quiz I would try to remember the main colors and symbols (s,o,*,^). For the project the math and python are strictly connected. If you get the math wrong the code would not work properly.
+
+- In the code from Thursday when assigning colors to circles we used the line, colors=[cm.cool((r**-1)%1) for r in rlist], can you explain why we use (r**-1)%1 ?
+How do you get a colormap to show more of the range of colors? Like how when we did cm.cool it was mostly only blue, not much of the rest of the range.
+
+A color map can be assigned any value in the (0,1) range. The way we did it was to take the reminder of the integer division and use it as the input. Very likley all of the numbers we picked gave a similar reminder.
+
+- Since we can do calculations in the list, can we also loop in the list?
+
+What do you mean excatly? You can use a list in a for loop, and you can use a loop when doing list comprehension.
+
+- I'm curious if there is a trick to plotting. for example looking at the plots from this week, it has a lot of code for one graph and it seams like a lot of components that can be easily messed up. Is it just a trial and error thing? should we just keep playing with the graphs until it look's its best?
+
+The short answer is yes. The plotting is a part of what it is usually referred to as 'post processing'. It will take a little bit of time to get the hang of it, but the more you plot, the more used to it you will become; and it will feel a little less trial and error.
+
+- Can we do shape other than circles in the exploration part of this project. 
+
+Yes, but checking for disjointness and avoid overlapping is more complex.
+
+- Find the connect of Geometric series and p-series with the original circle graph.
+
+What is the question? The area of the big circle is the sum of the series, the areas of the small circles are the individual terms of the series.
+
+- More for projects and going forward, but when is it okay to just leave a comment in the code cell, and what requires a markdown cell explaining the code? Or should I just default to going in depth through markdown, and using a simplified explanation in the code comments?
+
+You should just default to going in depth through markdown, and using a simplified explanation in the code comments?
+
+- How do separate the values returned from a function if more than one is returned? Do you have to set two variables  equal to the return or can you pick one out?.
+
+you can do both. I'll show an example in class.
+
+- How was your weekend?
+
+Fine, but that is not relevant to the class. Questions like this will not be accepted.
+
+- For the project, will we have to show both series on separate plots, or on the same plot?
+
+Each series in a separate plot
+
+- Can you just list the steps for the Project 2 ?
+
+Yes. (We have been doing this already for the whole week)
+
+- What does the function zetac() do?
+
+Computes the sum of a cnovergent p-series, skipping the first term.
+
+- is it possible to record the course and upload to somewhere? jupyter script is really useful but there are some quick questions that we asked during the course not being include in the srcipt, and I really would like to review them when I'm doing the project.
+
+I don't plan on recording the class, but I mentioned in the first lecture that you will need a notebook to take notes during class. 
+
+- One question I would have is will we continue graphing in future projects or only for a select few?
+
+Already asked last week. Please check weekly summary 3 
+
+- Do you have any advice on how to analyze the information from the project document? For example, how can you know which helper function we should create after reading the project handout? 
+
+It depends on what structure you want to give to the project. I will try to guide you when possible.
+
+- i'm xonfusing about so called analize part in the project. can you talk about it on class?
+
+Yes
+
+- What exactly do the "In[ ]" and "Out[ ]" in the Jupyter notebook mean? Say for instance, we have Out[20] , does it mean it's the 20th entry in a list called Out?
+
+Input and output. Out[20] is the 20th output.
+
+- Will certain weeks of class focus more on building the coding skills necessary to complete that week's project? And will other weeks focus more on general Python skills?
+
+The main idea is to explain python topics that we will use in the projects.
+
+- How does the random module work? How does it determine if the number it chooses is indeed random?
+
+
+there is an algorithm that generate pseudo-random numbers.
+
+- can a list containing lists also contain units not within a list?
+
+not clear. A list can contain any type of variable.
+
+
+- Will we be using any more math equations in the future and show graphs for them?
+
+yes. in project 3 for example.
+
+- is there a way to or not to manually input circles on the main circle.
+
+to manually inout circles you can use the `add_patch` command.
+
+
 Week 3
 ~~~~~~ 
 

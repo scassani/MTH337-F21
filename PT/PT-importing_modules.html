@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
@@ -15,18 +16,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Importing modules &#8212; MTH337_F21  documentation</title>
-    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/guzzle.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lists, ranges and “for” loops" href="PT-lists.html" />
+    <link rel="prev" title="Python tools" href="../python_tools.html" />
   
    
 
@@ -37,7 +39,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PT-lists.html" title="Lists, ranges and “for” loops"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../python_tools.html" title="Python tools"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../python_tools.html" accesskey="U">Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Importing modules</a></li> 
       </ul>
     </div>
@@ -68,6 +77,12 @@
     </div>
   </div>
 </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../python_tools.html"
+                        title="previous chapter">Python tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="PT-lists.html"
+                        title="next chapter">Lists, ranges and “for” loops</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -97,15 +112,17 @@
             <ol class="breadcrumb">
               <li><a href="../index.html">Docs</a></li>
               
+                <li><a href="../python_tools.html">Python tools</a></li>
+              
               <li>Importing modules</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="importing-modules">
+  <section id="importing-modules">
 <h1>Importing modules<a class="headerlink" href="#importing-modules" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="python-modules">
+<section id="python-modules">
 <h2>Python modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
 <p>When you open a new Jupyter notebook you get direct access only to the
 core part of Python. This basic functionality can be extended by using
@@ -334,13 +351,13 @@ with the module name. For example, the math module contains a variable
 <div class="output docutils container">
 <p>1.0</p>
 </div>
-</div>
-<div class="section" id="referencing-module-names">
+</section>
+<section id="referencing-module-names">
 <h2>Referencing module names<a class="headerlink" href="#referencing-module-names" title="Permalink to this headline">¶</a></h2>
 <p>If you use a function or a variable defined in some module several times
 it can become tedious having to prefix it by the module name each time.
 Fortunately there are several ways to make this easier:</p>
-<div class="section" id="simplify-the-module-name">
+<section id="simplify-the-module-name">
 <h3><strong>1. Simplify the module name.</strong><a class="headerlink" href="#simplify-the-module-name" title="Permalink to this headline">¶</a></h3>
 <p>For example, we can import the <code class="docutils literal notranslate"><span class="pre">math</span></code> module using the following
 statement:</p>
@@ -355,8 +372,8 @@ statement:</p>
 <div class="output docutils container">
 <p>3.141592653589793</p>
 </div>
-</div>
-<div class="section" id="import-only-certain-functions-and-variables">
+</section>
+<section id="import-only-certain-functions-and-variables">
 <h3><strong>2. Import only certain functions and variables.</strong><a class="headerlink" href="#import-only-certain-functions-and-variables" title="Permalink to this headline">¶</a></h3>
 <p>If you are going to use only selected functions and variables from a
 module, then you can import these items for direct use. For example, the
@@ -372,8 +389,8 @@ following statement imports only the variable <code class="docutils literal notr
 <div class="output docutils container">
 <p>1.0</p>
 </div>
-</div>
-<div class="section" id="import-everything-from-a-module-for-direct-use">
+</section>
+<section id="import-everything-from-a-module-for-direct-use">
 <h3><strong>3. Import everything from a module for direct use.</strong><a class="headerlink" href="#import-everything-from-a-module-for-direct-use" title="Permalink to this headline">¶</a></h3>
 <p>This method makes all content of the module available without prefixes:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
@@ -392,13 +409,25 @@ and variables, and you may not be aware what all of them are. If you use
 accident one of the names you define in your program will be the same
 one of the names you imported. In such case your program may fail to
 run, or it may run not as intended.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../python_tools.html" title="previous chapter (use the left arrow)">Python tools</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="PT-lists.html" title="next chapter (use the right arrow)">Lists, ranges and “for” loops</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -408,7 +437,14 @@ run, or it may run not as intended.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="PT-lists.html" title="Lists, ranges and “for” loops"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../python_tools.html" title="Python tools"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../python_tools.html" >Python tools</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Importing modules</a></li> 
       </ul>
     </div>

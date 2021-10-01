@@ -1,0 +1,33 @@
+Week 5: Sept 27 - Oct 1
+=======================
+
+
+Python
+~~~~~~
+
+* :doc:`Numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>`
+
+
+
+Project 2
+~~~~~~~~~
+
+* :doc:`Is there room ... ? </Projects/room/room>`.
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is due on Sunday Oct. 3 at midnight, and is available `**here** <https://forms.gle/9hCaqveC4Zn7ZFQa8>`_
+
+
+Week 5 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week05_in_class.html>`_
+- `Download  <../_static/week05_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz 5
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 5 <../Sample_Quizzes/quiz5/quiz5_sample.pdf>`

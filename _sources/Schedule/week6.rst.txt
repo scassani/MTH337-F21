@@ -1,0 +1,44 @@
+Week 6: Oct 4 - Oct 8
+=====================
+
+Project 3
+~~~~~~~~~
+
+* :doc:`Root finding </Projects/root_finding/root_finding>`.
+
+
+Python
+~~~~~~
+
+* :doc:`Numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>`
+* methods of creating a numpy array
+* indexing and slicing of numpy arrays
+* vectorization
+* numpy arrays and matplotlib
+* :doc:`Multidimensional numpy arrays </PT/PT-multidimensional_numpy_arrays/PT-multidimensional_numpy_arrays>`
+* :doc:`Matplotlib subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
+
+
+Mathematics
+~~~~~~~~~~~
+
+* Newton's Method
+* Complex numbers
+* Root of polynomials
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is due on Sunday Oct. 3 at midnight, and is available here TBD
+
+
+Week 6 notebook
+~~~~~~~~~~~~~~~
+
+
+
+Sample quiz 6
+~~~~~~~~~~~~~
+
+

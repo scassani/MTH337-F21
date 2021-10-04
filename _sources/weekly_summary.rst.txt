@@ -1,6 +1,98 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 5
+~~~~~~
+
+- Can we talk about errors in code in class more? Like when getting a certain error, how to figure out what it means and where to go from there? Or maybe just attach on the website a good link as a resource.
+
+We can see a few examples, but overall it's going to get better the more you use python.
+
+- When you create an empty array, how do you fill the array with entries?
+
+you use the indeces. ( I will show an example in class)
+
+- I know you compared arrays to vectors, but can arrays have multiple rows? or is that something with a different type? 
+
+yes they can. They are called multidimensional arrays
+
+- Why do we sometimes only import a few things from math rather than just import the whole thing. 
+
+That way I don't need the math prefix.
+
+- can you turn an array to a list? if you can how do you go from an array to a list. 
+
+Use ``list(myarray)``
+
+- Would np arrays be similar to arrays in other programming languages like c? What are the advantages of the list or arrays?
+
+Yes. They are faster for computations, and allow vectorial operations.
+
+- what is the relationship between the p and the amount of circles? Do I actually need to compute their total area? 
+
+The relationship between p and the amount of circles is for you to explore in the project. You do not have to compute the total ara of the colored circles.
+
+- What exactly is the time() function used for? 
+
+It tells you how many seconds have passed from Jan. 1 1970
+
+- What is the difference between arrays and lists?
+
+There are several that are listed on my notes. A big difference is that arrays must contain elements of the same tyoe and cannot be resized.
+
+- Why do we need a a large number of points to plot a circle?(using the cos and sin functions)
+
+To get a smooth line.
+
+- What would you recommend studying outside of class to better prepare for the third project? 
+
+We will see everything we need in class. We will work with Newton's method and complex numbers.
+
+- Can Numpy be used in the loops?
+
+Yes, but you should not do it unless there is no other way.
+
+- What are all the things matplotlib lets us do?
+
+A lot. You should ask this to google. :)
+
+-I'm sorry if this was answered in class, but can we iterate through an array? Or is the whole point of an array so that we don't have to iterate through it?
+
+Yes, but you should not do it unless there is no other way.
+
+- When we create array with numpy. For example: np.ones(3), the output will be: array([1. , 1. , 1.]) Is every element in the array type "float" or "int" because I see the "." after 1? What is the reason behind that? 
+
+It's a float by default, but it can be changed.
+
+- In what circumstances would the np.empty() command be useful if the array is filled with random values?
+
+If you have to create a big array for storing numbers later, ``np.empty`` is very efficient
+
+- Now that we’ve learned about arrays, which are similar to lists, will there always be a need for one or the other? Or will we start to use one more than the other?
+
+Depending on the application one might be better than the other.
+
+- def myfun(x,y): for k in range(0,n): if (something is true) == false:     return False return True Is that work?
+
+yes. I think I use a similar structure for ``isdisjoint``
+
+- For the second project, still having problem processing the isdisjoint part and the graph for it.
+
+not a question.
+
+- Can you store data of different types in arrays like with lists?
+
+no
+
+- While working on the project, I was trying to plot 10000 circles and nothing ever showed up after I waited for like 10 minutes. Is there a better way to plot a large number of circles?
+
+there might be a better way, but I don't think plotting is the issue. The ``gen_centers`` function is probably taking long to generate the centers.
+
+- Will we be using more circle graphs or have any similar projects like project 2?
+
+We will use graphing in a lot of projects.
+
+
 Week 4
 ~~~~~~
 

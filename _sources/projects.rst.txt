@@ -8,3 +8,4 @@ Projects
 
 	A Particular Sequence <Projects/part_sequence/part_sequence>
 	Is there room ? <Projects/room/room>
+	Root finding <Projects/root_finding/root_finding>

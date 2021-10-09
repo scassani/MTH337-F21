@@ -42,4 +42,4 @@ Week 6 notebook
 Sample quiz 6
 ~~~~~~~~~~~~~
 
-
+- :download:`Sample Quiz 6 <../Sample_Quizzes/quiz6/quiz6_sample.pdf>`

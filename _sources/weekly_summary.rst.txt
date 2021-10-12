@@ -1,6 +1,104 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 6
+~~~~~~
+
+- Will I need to make my markdown more involved with latex for the sake of presentation or is that not nessecary.
+
+If the markdown contains formulas you shoudl definitely use LaTeX
+
+- Next week, will we get more time in class to talk about graphing the newton function?
+
+Yes, we will
+
+- For Part 1 of Project 3, do we only need to plot the final approximation value after 100 (or 200) iterations of the `newton` function, or do we need a graph that plots all 100 (or 200) approximation values for each x in the linspace like in the plot displayed on the course website?
+
+The plot on the website showns the value of the 100th iteration of newton for all the points you start with.
+
+- Once we have the newton function printing a list of roots for the project, what should our next step be?
+
+Work on part 2.
+
+- still not quiet understand about the plot
+
+This is not a question. You should come to office hours.
+
+- For the matrix that we lean how do we change value. Like say A is a matrix and A[0,0]=3 and I do like it to change 4. How do I do that. 
+
+A[0,0]=4
+
+- For the project, in the part where we need a desired tolerance to find a root, will we be given that tolerance or is that something that will be different for each case or is it something we need to find?
+
+you can pick 0.001 or even 0.01 as your tolerance
+
+- I've gotten the graph to display the roots, but I'm still unsure how to make it look like it does on the project description.  Are we going to be doing any projects based on real world applications?
+
+We can talk about the graph on Tuesday (or at office hours). Yes.
+
+- I am trying to title a graph with a polynomial equation using markdown, however to make a title for a graph I believe it needs to be in a code cell. Is there a way to use markdown text in a code cell?
+
+Do you mean LaTeX? try using the regular LaTeX syntax $x^2+...$
+ 
+- What does np.arange do? I missed the class where you first talked about it.
+
+The same as range. But it creates a numpy array and you can use a step that is not integer
+
+``np.arange(1,2,6,0.5)`` will create the array ``[1 1.5 2 2.5]``
+
+- Is there a way to assign a variable? All of our functions revolved around giving an output as a number (at least for this project), but how can we extend this.  This can provide more flexibility to the functions we can input as a polynomial and we don't have to write  a `poly` function for each function. 
+
+The question is not clear. We can talk about it in class on Tuesday.
+
+- In this week we studied how to build the project using numpy library, but I met a problem when I try to plot out the data. In short, I would like to only show the data that is inside a given range, [0,10] for example, usually I can achieve this through xlim and ylim, however, they didn't work at all, and I don't know why this issue happened. 
+
+Again, this is not a question. 
+
+- How does passing a function into a function work like we did for the project?
+
+You pass the function as an argument (say ``f``) of another function (say ``g``), and then you can use the function ``f`` inside the function ``g`` calling ``f`` with the correct arguments. 
+
+- what does the np.meshgrid command do?
+
+repeats the two vectors given as arguments one over rows and one over columns. 
+
+- Is project 3 due this Friday?
+
+yes
+
+- Do we use the tolerance (For project 3), to determine the convergence?
+
+yes.
+
+- Do we write a function to do the derivative or we could import it from a library?
+
+We can write it ourself.
+
+- What if for a project, after plotting, we observe some pattern(or sth special), we state that out but have no idea to explain why it happens? Will we got a reduction in grade for that?
+
+You shoudl always try to justify/explain your findings. 
+
+- can we manipulate arrays in the same way as lists?
+
+yes and no. You shoudl look at my notes from last week, and stop by office hours.
+
+- Can we do calculation on np.empty?
+
+yes.
+
+- I did not understand how to start for step 2 in the project. Especially the part that I have to show the complex plane
+
+First you generate the plane using ``meshgrid`` than you can apply newton to the plane and check what root you end up close to.
+
+- Can we transpose a row to column and vice versa in matrices? What is the difference between multidimensional array and a matrices?
+
+Yes we can. 2 dimensional arrays are basically like matrices. However there are arrays with more than 2 dimensions
+
+- Will we use eigen vectors or values for future projects? 
+
+No.
+
+
 Week 5
 ~~~~~~
 

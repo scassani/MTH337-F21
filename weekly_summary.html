@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 5: Sept 27 - Oct 1" href="Schedule/week5.html" />
+    <link rel="prev" title="Week 6: Oct 4 - Oct 8" href="Schedule/week6.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week5.html" title="Week 5: Sept 27 - Oct 1"
+          <a href="Schedule/week6.html" title="Week 6: Oct 4 - Oct 8"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-6">Week 6</a></li>
 <li><a class="reference internal" href="#week-5">Week 5</a></li>
 <li><a class="reference internal" href="#week-4">Week 4</a></li>
 <li><a class="reference internal" href="#week-3">Week 3</a></li>
@@ -69,8 +70,8 @@
   </div>
 </div>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="Schedule/week5.html"
-                        title="previous chapter">Week 5: Sept 27 - Oct 1</a></p>
+  <p class="topless"><a href="Schedule/week6.html"
+                        title="previous chapter">Week 6: Oct 4 - Oct 8</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -108,6 +109,102 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-6">
+<h2>Week 6<a class="headerlink" href="#week-6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Will I need to make my markdown more involved with latex for the sake of presentation or is that not nessecary.</p></li>
+</ul>
+<p>If the markdown contains formulas you shoudl definitely use LaTeX</p>
+<ul class="simple">
+<li><p>Next week, will we get more time in class to talk about graphing the newton function?</p></li>
+</ul>
+<p>Yes, we will</p>
+<ul class="simple">
+<li><p>For Part 1 of Project 3, do we only need to plot the final approximation value after 100 (or 200) iterations of the <cite>newton</cite> function, or do we need a graph that plots all 100 (or 200) approximation values for each x in the linspace like in the plot displayed on the course website?</p></li>
+</ul>
+<p>The plot on the website showns the value of the 100th iteration of newton for all the points you start with.</p>
+<ul class="simple">
+<li><p>Once we have the newton function printing a list of roots for the project, what should our next step be?</p></li>
+</ul>
+<p>Work on part 2.</p>
+<ul class="simple">
+<li><p>still not quiet understand about the plot</p></li>
+</ul>
+<p>This is not a question. You should come to office hours.</p>
+<ul class="simple">
+<li><p>For the matrix that we lean how do we change value. Like say A is a matrix and A[0,0]=3 and I do like it to change 4. How do I do that.</p></li>
+</ul>
+<p>A[0,0]=4</p>
+<ul class="simple">
+<li><p>For the project, in the part where we need a desired tolerance to find a root, will we be given that tolerance or is that something that will be different for each case or is it something we need to find?</p></li>
+</ul>
+<p>you can pick 0.001 or even 0.01 as your tolerance</p>
+<ul class="simple">
+<li><p>I’ve gotten the graph to display the roots, but I’m still unsure how to make it look like it does on the project description.  Are we going to be doing any projects based on real world applications?</p></li>
+</ul>
+<p>We can talk about the graph on Tuesday (or at office hours). Yes.</p>
+<ul class="simple">
+<li><p>I am trying to title a graph with a polynomial equation using markdown, however to make a title for a graph I believe it needs to be in a code cell. Is there a way to use markdown text in a code cell?</p></li>
+</ul>
+<p>Do you mean LaTeX? try using the regular LaTeX syntax $x^2+…$</p>
+<ul class="simple">
+<li><p>What does np.arange do? I missed the class where you first talked about it.</p></li>
+</ul>
+<p>The same as range. But it creates a numpy array and you can use a step that is not integer</p>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange(1,2,6,0.5)</span></code> will create the array <code class="docutils literal notranslate"><span class="pre">[1</span> <span class="pre">1.5</span> <span class="pre">2</span> <span class="pre">2.5]</span></code></p>
+<ul class="simple">
+<li><p>Is there a way to assign a variable? All of our functions revolved around giving an output as a number (at least for this project), but how can we extend this.  This can provide more flexibility to the functions we can input as a polynomial and we don’t have to write  a <cite>poly</cite> function for each function.</p></li>
+</ul>
+<p>The question is not clear. We can talk about it in class on Tuesday.</p>
+<ul class="simple">
+<li><p>In this week we studied how to build the project using numpy library, but I met a problem when I try to plot out the data. In short, I would like to only show the data that is inside a given range, [0,10] for example, usually I can achieve this through xlim and ylim, however, they didn’t work at all, and I don’t know why this issue happened.</p></li>
+</ul>
+<p>Again, this is not a question.</p>
+<ul class="simple">
+<li><p>How does passing a function into a function work like we did for the project?</p></li>
+</ul>
+<p>You pass the function as an argument (say <code class="docutils literal notranslate"><span class="pre">f</span></code>) of another function (say <code class="docutils literal notranslate"><span class="pre">g</span></code>), and then you can use the function <code class="docutils literal notranslate"><span class="pre">f</span></code> inside the function <code class="docutils literal notranslate"><span class="pre">g</span></code> calling <code class="docutils literal notranslate"><span class="pre">f</span></code> with the correct arguments.</p>
+<ul class="simple">
+<li><p>what does the np.meshgrid command do?</p></li>
+</ul>
+<p>repeats the two vectors given as arguments one over rows and one over columns.</p>
+<ul class="simple">
+<li><p>Is project 3 due this Friday?</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>Do we use the tolerance (For project 3), to determine the convergence?</p></li>
+</ul>
+<p>yes.</p>
+<ul class="simple">
+<li><p>Do we write a function to do the derivative or we could import it from a library?</p></li>
+</ul>
+<p>We can write it ourself.</p>
+<ul class="simple">
+<li><p>What if for a project, after plotting, we observe some pattern(or sth special), we state that out but have no idea to explain why it happens? Will we got a reduction in grade for that?</p></li>
+</ul>
+<p>You shoudl always try to justify/explain your findings.</p>
+<ul class="simple">
+<li><p>can we manipulate arrays in the same way as lists?</p></li>
+</ul>
+<p>yes and no. You shoudl look at my notes from last week, and stop by office hours.</p>
+<ul class="simple">
+<li><p>Can we do calculation on np.empty?</p></li>
+</ul>
+<p>yes.</p>
+<ul class="simple">
+<li><p>I did not understand how to start for step 2 in the project. Especially the part that I have to show the complex plane</p></li>
+</ul>
+<p>First you generate the plane using <code class="docutils literal notranslate"><span class="pre">meshgrid</span></code> than you can apply newton to the plane and check what root you end up close to.</p>
+<ul class="simple">
+<li><p>Can we transpose a row to column and vice versa in matrices? What is the difference between multidimensional array and a matrices?</p></li>
+</ul>
+<p>Yes we can. 2 dimensional arrays are basically like matrices. However there are arrays with more than 2 dimensions</p>
+<ul class="simple">
+<li><p>Will we use eigen vectors or values for future projects?</p></li>
+</ul>
+<p>No.</p>
+</section>
 <section id="week-5">
 <h2>Week 5<a class="headerlink" href="#week-5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -653,7 +750,7 @@ divisors = []</p>
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week5.html" title="previous chapter (use the left arrow)">Week 5: Sept 27 - Oct 1</a>
+        <a class="btn btn-default" href="Schedule/week6.html" title="previous chapter (use the left arrow)">Week 6: Oct 4 - Oct 8</a>
       </div>
     
     </div>
@@ -669,7 +766,7 @@ divisors = []</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week5.html" title="Week 5: Sept 27 - Oct 1"
+          <a href="Schedule/week6.html" title="Week 6: Oct 4 - Oct 8"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 

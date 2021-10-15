@@ -42,4 +42,4 @@ Week 7 notebook
 Sample quiz 7
 ~~~~~~~~~~~~~
 
-
+- :download:`Sample Quiz 7 <../Sample_Quizzes/quiz7/quiz7_sample.pdf>`

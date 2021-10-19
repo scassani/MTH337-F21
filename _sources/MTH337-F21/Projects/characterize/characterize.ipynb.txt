@@ -7,7 +7,7 @@
    "source": [
     "# Image Characterization\n",
     "\n",
-    "due Sunday October 24, at 11:59 PM\n",
+    "due Friday October 22, at 11:59 PM\n",
     "\n",
     "In this project we will render an image using characters.\n",
     "\n",

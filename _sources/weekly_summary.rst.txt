@@ -1,6 +1,111 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 7
+~~~~~~
+
+- Do you have to re run everything cell of code if you imported something at the top? Sometimes it says np not defined so I re run it, then it works, but other times I do not have to re run things. Is there a reason why?
+
+I believe it depends where you are using the new import you made.
+
+- Is there a way to make plotting shorter/faster? Every time I plot something for a project I copy and paste almost all of the commands for the title, axis, and x and y limits.
+
+Create a function that plots, and use string formatting to automate the title, axis,....
+
+- How do you zero out things that aren't multiples of 7?
+
+myarray[~ (myarray%7==0)] =0` should work
+
+- Will boolean arrays be useful to use beyond their application in Project 3? And if yes, will our future projects involve much more complicated boolean statements compared to what we used in the project?
+
+Yes (for project 4 and 5), they might be more simple statements or more complicated depending on how you approach the problem.
+
+- Can you explain how to use subplot when the plots are function. Like say if I have function 'a' and 'b' that when I call them graph a plot. but how do I so a sub plot with them. I say that with subplot you have to give them the point to subplot. So What I am saying is can you make a subplot with function. 
+
+You can make subplots with functions. For example you could make a function takes the parameter for a subplot like number of rows, cols and position. Then you can have the function plot the subplot. As long as you do not run plt.show() you can keep on using the function to plot on the same plot using subplot.
+
+- Are the patterns in the graphs outputted in part 3 of the Newton's Method project a known pattern, or was it unintentional that we were to discover that they look like this?
+
+They are called fractals.
+
+- is a reshaped array the same thing as a matrix? Also where the baby pictures at?
+
+It depends on the dimensions. An array with 2 dimensions is a matrix. An arrya can however have more than two dimensions. Baby pictures? 
+
+- Is the bonus section on Project 3 an "all or nothing" reward, or can you be eligible for partial bonus credit too?
+
+I would say it's all or nothing, but you might get the bonus even if you did not completely finish the bonus part.
+
+- When we read the image in python is there a limit size required or no limit?
+
+Technically there is not limit.
+
+- Is there a numerical grade for the projects?
+
+A=97%, A- = 92%, B+ = 88.5% ,....
+
+- What is a mesh? What separates it from an arrray?
+
+A mesh is a reticulate (or grid) or points. It is very convenient to use array to store meshes.
+
+- When using mathematical operations on two multidimensional arrays, do the arrays have to have the same dimensions or can they be different?
+
+There are sime rules that allows to do operations with arrays of different sizes, but we haven't seen them yet. (It is called broadcasting)
+
+- What are the things we can do with numpy?
+
+Very efficient vectorial operations.
+
+- in this week we mainly focus on building projects. But I met some problem in adjusting x and y axis for plot. Specifically, I'm trying to plot a series of number, and some of them have a very high y value, which will make the y axis become wide. but I only want to focus on a small range of y, I want to ignore the points that is not in this range. Normally I can use ylim to set the range, but it somehow did not work for me.
+
+We should look at this more in details (maybe during office hours)
+
+- Is the biggest advantage to using a list over a numpy array just the fact that data of different types can go into a list but not an array?
+
+Also you can change the size of a list, while you cannot with arrays.
+
+- Are we going be working with complex numbers in future projects?
+
+no
+
+- can print() command be used to output latex code?
+
+I am not sure. But I do not think so.
+
+- what is difference between help() and dir()?
+
+help() gives information on a function. dir() list all of the functions/variables in a module
+
+- The core of MTH 337 is research, which is implemented with the help of coding in Jupyter Notebook. So, what are some tips you would give for people, new into research? I also feel it would be helpful for doing well in projects. 
+
+When describing the results, you shoudl always try to explain why the results is important/significant and give an idea of why the result is happening. Also explore any direction that you might think it is interesting.
+
+- For the new material, I do not have any questions. For the project we have did, I had a hard time to form the graphs are given code and how to produce the graphs by using my newton function.
+
+We shoud have discussed this either in class or during office hours.
+
+- In order to perform better in the project, should we read more outside resources?
+
+Maybe it could help for the introduction or to find additional direction for the exploration. But it is not necessary. I try to give as many information as I can during class, and during office hours.
+
+- What are applications of linspaces and arrays besides images?
+
+A lot of applied math applications (like approximation of derivatives, and solving problems with differential equations) start from linspaces, and use arrays heavily
+
+- Will we be working with mutable and immutable objects?
+
+Not specifically. We use them in projects, and you shoudl always keep in mind that when working with mutable types you have to make a copy when you do not want to mofify the original variable
+
+- Will we be using images for our next project?
+
+yes
+
+- Could it have been possible to extend Newton's method to approximating roots of functions beyond the format, f(z) = z^n - 1 and would we achieve a similar fractal pattern from these graphs?
+
+It could be possible to extend it. I do not know if we woud get a fractal for each polynomial. 
+
+
+
 Week 6
 ~~~~~~
 

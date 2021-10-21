@@ -1,0 +1,35 @@
+Week 8: Oct 17 - Oct 22
+=======================
+
+Project 4
+~~~~~~~~~
+
+* :doc:`Image characteriztion </Projects/characterize/characterize>`.
+
+
+Python
+~~~~~~
+
+* :doc:`Multidimensional numpy arrays </PT/PT-multidimensional_numpy_arrays/PT-multidimensional_numpy_arrays>`
+* :doc:`Matplotlib subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
+* :doc:`Image processing </PT/PT-image_processing/PT-image_processing>`
+
+
+
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is due on Sunday Oct. 17 at midnight, and is available `**here** <https://forms.gle/cChYw9fjd2LeERE88>`_ 
+
+Week 8 notebook
+~~~~~~~~~~~~~~~
+
+
+
+
+Sample quiz 8
+~~~~~~~~~~~~~
+
+

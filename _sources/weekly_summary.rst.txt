@@ -1,6 +1,104 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 8
+~~~~~~
+
+- How do you know when a True/False statement would print out of a function rather than values?
+
+It depends what you ask to python. If you have an array ``a``, ``a>3`` will be an array of booleans, whereas ``a[a>3]`` will show the values of ``a`` that are greater than 3.
+
+- Do you know how many other small (1 week long) projects we will have? Is there a specific number of short projects we will do?
+
+Probably 2 more
+
+- How far can we actually go in terms of putting "for" loops in "for" loops, or is it just as much as our computer can handle.
+
+The least you put the better. If you put too many your computer might not enjoy that.
+
+- What does changing the level of transparency visually change about an image? Aside from the red green and blue levels, a forth level called transparency. How does this forth level affect the image?
+
+The transparency of the color. For example black with 50% transparency will look like gray. (Also it will be transparent, so it would be possible to see through it)
+
+- I dont know how to word it. Say I have 2400 by 1500 array (pixcel). Is there a way that we can make it 100 by 100 array. Like do we have to go through a list to do it? Can we use some sort array.
+
+you can use the function reshape. But it might be tricky to get exactly what you want. It might be easier to make a list of arrays, and then use the reshape function.
+ 
+- The function .shape returns the shape of an array.  Does that mean when .shape is used on an image that the shape returned is the height and width of the image? For example if the shape returned is (1500,1200,3) would the width of the image be 1200 and the height be 1500?
+
+width would be 1500 pixels and height 1200 pixels.
+
+- the question on mean of the char picture is still not quiet clear
+
+What do you mean? the mean of a character reperesents how dark/light the character is on average.
+
+- Are we going to have more exercises in class to show participation?
+
+yes
+
+- If you made a subplot like `plt.subplot(1,2,3)`, what would 1, 2, and 3 each represent?
+
+1: number of rows
+2: number of columns
+3: position
+
+- How do you print a column in a nested list like list[1][1] prints something from the second column but slicing like  list[:4][1] does not work.
+
+You cannot slice lists like you did in the second way. You might want to use list comprehension to build the list with the pieces you need and then display it. 
+
+- when characterizing an image, do the dimensions have to be divisible by 24 and 15?
+
+no. You can drop the extra pixels that you would get.
+
+- Can you sort a list containing strings alphabetically in the same way you would sort list with numbers in sequential order?
+
+yes.
+
+- I am trying to write a function to plt.imshow() many pictures and combine with subplot. However, it does not work as my expectation. Instead of 2 rows and  3 columns, it is 6 rows and 1 columns. Can we do this in class?
+
+you are probably doing plt.show() after each plot. You should use plt.show() at the end only. We can do something in class.
+
+- Earlier, when you did an example where a = np.random.rand(4,4,3) and tried plt.imshow(a[:,:,0]), why did it not plot the red scale?
+
+Because when you imshow() a two-dimensional array it does not have RGB channels, but only one channel. So python will use a colormap to represent it.
+
+- What's the difference between a tuple and an array?
+
+A tuple is like a list (but it cannot be modified after creation). An array allows for vectorial opeartions and its faster to compute on.
+
+- Can we convert an image to consist of white and black only?
+
+Yes if you plot it with the ``gray`` colormap
+
+- is there an easier way to do this week's project?
+
+there might be. 
+
+- What are some major applications of arrays besides computer images?
+
+Applied math problems can be solved with arrays.
+
+- Does the arrays of the RGB have the same shape as those of the pixels in the same corresponding positions?
+
+yes
+
+- I'm confusing in converting 3 layers in to 1 layers. So we know that a graph can be converting into grayscale by 0.3R+0.59G+0.11B, but when I try to use this formula to convert a graph, it did be converted into one layer, but when I call plt.imshow(), the graph is still colored. and it turns to gray only when i call plt.imshow(graph,cmap='gray'). 
+
+Because when you imshow() a two-dimensional array it does not have RGB channels, but only one channel. So python will use a colormap to represent it.
+
+If we can read an image and assign a variable, can we program an image matching program by comparing the values?
+
+I think so
+
+Had trouble with slicing the gray scaled image into pieces and try to use that to form the image with characters.
+
+Not a question.
+
+You said we'll be using this project for another project, can we use our same code?
+
+We will use similar ideas. But not the same code.
+
+
 Week 7
 ~~~~~~
 

@@ -10,3 +10,4 @@ Projects
 	Is there room ? <Projects/room/room>
 	Root finding <Projects/root_finding/root_finding>
 	Characterize me <Projects/characterize/characterize>
+	Epidemic <Projects/epidemic/epidemic>

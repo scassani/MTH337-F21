@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 7: Oct 11 - Oct 15" href="Schedule/week7.html" />
+    <link rel="prev" title="Week 8: Oct 17 - Oct 22" href="Schedule/week8.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week7.html" title="Week 7: Oct 11 - Oct 15"
+          <a href="Schedule/week8.html" title="Week 8: Oct 17 - Oct 22"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-8">Week 8</a></li>
 <li><a class="reference internal" href="#week-7">Week 7</a></li>
 <li><a class="reference internal" href="#week-6">Week 6</a></li>
 <li><a class="reference internal" href="#week-5">Week 5</a></li>
@@ -71,8 +72,8 @@
   </div>
 </div>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="Schedule/week7.html"
-                        title="previous chapter">Week 7: Oct 11 - Oct 15</a></p>
+  <p class="topless"><a href="Schedule/week8.html"
+                        title="previous chapter">Week 8: Oct 17 - Oct 22</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -110,6 +111,97 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-8">
+<h2>Week 8<a class="headerlink" href="#week-8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>How do you know when a True/False statement would print out of a function rather than values?</p></li>
+</ul>
+<p>It depends what you ask to python. If you have an array <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">a&gt;3</span></code> will be an array of booleans, whereas <code class="docutils literal notranslate"><span class="pre">a[a&gt;3]</span></code> will show the values of <code class="docutils literal notranslate"><span class="pre">a</span></code> that are greater than 3.</p>
+<ul class="simple">
+<li><p>Do you know how many other small (1 week long) projects we will have? Is there a specific number of short projects we will do?</p></li>
+</ul>
+<p>Probably 2 more</p>
+<ul class="simple">
+<li><p>How far can we actually go in terms of putting “for” loops in “for” loops, or is it just as much as our computer can handle.</p></li>
+</ul>
+<p>The least you put the better. If you put too many your computer might not enjoy that.</p>
+<ul class="simple">
+<li><p>What does changing the level of transparency visually change about an image? Aside from the red green and blue levels, a forth level called transparency. How does this forth level affect the image?</p></li>
+</ul>
+<p>The transparency of the color. For example black with 50% transparency will look like gray. (Also it will be transparent, so it would be possible to see through it)</p>
+<ul class="simple">
+<li><p>I dont know how to word it. Say I have 2400 by 1500 array (pixcel). Is there a way that we can make it 100 by 100 array. Like do we have to go through a list to do it? Can we use some sort array.</p></li>
+</ul>
+<p>you can use the function reshape. But it might be tricky to get exactly what you want. It might be easier to make a list of arrays, and then use the reshape function.</p>
+<ul class="simple">
+<li><p>The function .shape returns the shape of an array.  Does that mean when .shape is used on an image that the shape returned is the height and width of the image? For example if the shape returned is (1500,1200,3) would the width of the image be 1200 and the height be 1500?</p></li>
+</ul>
+<p>width would be 1500 pixels and height 1200 pixels.</p>
+<ul class="simple">
+<li><p>the question on mean of the char picture is still not quiet clear</p></li>
+</ul>
+<p>What do you mean? the mean of a character reperesents how dark/light the character is on average.</p>
+<ul class="simple">
+<li><p>Are we going to have more exercises in class to show participation?</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>If you made a subplot like <cite>plt.subplot(1,2,3)</cite>, what would 1, 2, and 3 each represent?</p></li>
+</ul>
+<p>1: number of rows
+2: number of columns
+3: position</p>
+<ul class="simple">
+<li><p>How do you print a column in a nested list like list[1][1] prints something from the second column but slicing like  list[:4][1] does not work.</p></li>
+</ul>
+<p>You cannot slice lists like you did in the second way. You might want to use list comprehension to build the list with the pieces you need and then display it.</p>
+<ul class="simple">
+<li><p>when characterizing an image, do the dimensions have to be divisible by 24 and 15?</p></li>
+</ul>
+<p>no. You can drop the extra pixels that you would get.</p>
+<ul class="simple">
+<li><p>Can you sort a list containing strings alphabetically in the same way you would sort list with numbers in sequential order?</p></li>
+</ul>
+<p>yes.</p>
+<ul class="simple">
+<li><p>I am trying to write a function to plt.imshow() many pictures and combine with subplot. However, it does not work as my expectation. Instead of 2 rows and  3 columns, it is 6 rows and 1 columns. Can we do this in class?</p></li>
+</ul>
+<p>you are probably doing plt.show() after each plot. You should use plt.show() at the end only. We can do something in class.</p>
+<ul class="simple">
+<li><p>Earlier, when you did an example where a = np.random.rand(4,4,3) and tried plt.imshow(a[:,:,0]), why did it not plot the red scale?</p></li>
+</ul>
+<p>Because when you imshow() a two-dimensional array it does not have RGB channels, but only one channel. So python will use a colormap to represent it.</p>
+<ul class="simple">
+<li><p>What’s the difference between a tuple and an array?</p></li>
+</ul>
+<p>A tuple is like a list (but it cannot be modified after creation). An array allows for vectorial opeartions and its faster to compute on.</p>
+<ul class="simple">
+<li><p>Can we convert an image to consist of white and black only?</p></li>
+</ul>
+<p>Yes if you plot it with the <code class="docutils literal notranslate"><span class="pre">gray</span></code> colormap</p>
+<ul class="simple">
+<li><p>is there an easier way to do this week’s project?</p></li>
+</ul>
+<p>there might be.</p>
+<ul class="simple">
+<li><p>What are some major applications of arrays besides computer images?</p></li>
+</ul>
+<p>Applied math problems can be solved with arrays.</p>
+<ul class="simple">
+<li><p>Does the arrays of the RGB have the same shape as those of the pixels in the same corresponding positions?</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>I’m confusing in converting 3 layers in to 1 layers. So we know that a graph can be converting into grayscale by 0.3R+0.59G+0.11B, but when I try to use this formula to convert a graph, it did be converted into one layer, but when I call plt.imshow(), the graph is still colored. and it turns to gray only when i call plt.imshow(graph,cmap=’gray’).</p></li>
+</ul>
+<p>Because when you imshow() a two-dimensional array it does not have RGB channels, but only one channel. So python will use a colormap to represent it.</p>
+<p>If we can read an image and assign a variable, can we program an image matching program by comparing the values?</p>
+<p>I think so</p>
+<p>Had trouble with slicing the gray scaled image into pieces and try to use that to form the image with characters.</p>
+<p>Not a question.</p>
+<p>You said we’ll be using this project for another project, can we use our same code?</p>
+<p>We will use similar ideas. But not the same code.</p>
+</section>
 <section id="week-7">
 <h2>Week 7<a class="headerlink" href="#week-7" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -854,7 +946,7 @@ divisors = []</p>
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week7.html" title="previous chapter (use the left arrow)">Week 7: Oct 11 - Oct 15</a>
+        <a class="btn btn-default" href="Schedule/week8.html" title="previous chapter (use the left arrow)">Week 8: Oct 17 - Oct 22</a>
       </div>
     
     </div>
@@ -870,7 +962,7 @@ divisors = []</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week7.html" title="Week 7: Oct 11 - Oct 15"
+          <a href="Schedule/week8.html" title="Week 8: Oct 17 - Oct 22"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 

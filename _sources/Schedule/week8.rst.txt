@@ -26,10 +26,11 @@ The weekly summary google form is due on Sunday Oct. 17 at midnight, and is avai
 Week 8 notebook
 ~~~~~~~~~~~~~~~
 
+- `View online <../_static/week08_in_class.html>`_
+- `Download  <../_static/week08_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 
+Sample quiz 8 - for Thursday 10/29 quiz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sample quiz 8
-~~~~~~~~~~~~~
-
-
+- :download:`Sample Quiz 8 <../Sample_Quizzes/quiz8/quiz8_sample.pdf>`

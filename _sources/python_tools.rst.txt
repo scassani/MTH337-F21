@@ -16,3 +16,4 @@ Python tools
 	Subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>
 	Numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>
 	Multidimensional numpy arrays </PT/PT-multidimensional_numpy_arrays/PT-multidimensional_numpy_arrays>
+	Image processing </PT/PT-image_processing/PT-image_processing>

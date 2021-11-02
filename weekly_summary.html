@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 8: Oct 17 - Oct 22" href="Schedule/week8.html" />
+    <link rel="prev" title="Week 10: Nov 1 - 5" href="Schedule/week10.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week8.html" title="Week 8: Oct 17 - Oct 22"
+          <a href="Schedule/week10.html" title="Week 10: Nov 1 - 5"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-9">Week 9</a></li>
 <li><a class="reference internal" href="#week-8">Week 8</a></li>
 <li><a class="reference internal" href="#week-7">Week 7</a></li>
 <li><a class="reference internal" href="#week-6">Week 6</a></li>
@@ -72,8 +73,8 @@
   </div>
 </div>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="Schedule/week8.html"
-                        title="previous chapter">Week 8: Oct 17 - Oct 22</a></p>
+  <p class="topless"><a href="Schedule/week10.html"
+                        title="previous chapter">Week 10: Nov 1 - 5</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -111,6 +112,105 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-9">
+<h2>Week 9<a class="headerlink" href="#week-9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>How do we iterate through an array in a for loop, why is it sometimes we get an error unless we make a copy?</p></li>
+</ul>
+<p>if the array comes form reaading an image, it is due to the image being protected to avoid being modified. If it is somethign else, I might need to look at the code.</p>
+<ul class="simple">
+<li><p>When doing the function for epidemics, why wouldn’t we use the range(1,202) instead of (1,201)? Wouldn’t range (1,202) go from rows 1 to 201 which is what we want to cycle through? I don’t understand why it would be (1,201) because that doesn’t’t seem like enough.</p></li>
+</ul>
+<p>The array is 202x202 with indeces going from 0 to 201. If you want to cover indeces 1-200 (to skip the first and last) you need range(1,201)</p>
+<ul class="simple">
+<li><p>For part 1, is a graph of all the cells supposed to come out or is that just part 2? Also can we include part 4 in our part 1 or should it be separate?</p></li>
+</ul>
+<p>You can include part 4 in part 1 (just leave the vaccination probability to 0) Part 1 is the creation of the function. then you will get the results for part 2,3,4</p>
+<ul class="simple">
+<li><p>Is just selecting the green component of an image and displaying that with cmpa=’gray’ enough or do we need to memorize the formula for conversion?</p></li>
+</ul>
+<p>it is good enough</p>
+<ul class="simple">
+<li><p>How can slicing an array (of random entries) be used for the locations of the healthy/sick cells?</p></li>
+</ul>
+<p>the random array is used to decide if a cell will get sick/recover</p>
+<ul class="simple">
+<li><p>Can you explain array Broadcasting. I am a confused when you can add arrays of different dimention.</p></li>
+</ul>
+<p>you start matching dimensions from the end of both arrays. If the dimension is the same or one of them is 1 you can combine the arrays</p>
+<ul class="simple">
+<li><p>For adding arrays, can you add arrays as long as one of the dimensions matches or is it only if both match and/or contain a 1?</p></li>
+</ul>
+<p>see answer above.</p>
+<ul class="simple">
+<li><p>Can you only read in an image if it is in the same folder as the file you are working in?</p></li>
+</ul>
+<p>not necessarily. You can give the path of the image, but it is easier to read it from the folder.</p>
+<ul class="simple">
+<li><p>For the Halloween exercise we were suppose to zero out the green, why did we need the relative concentration?</p></li>
+</ul>
+<p>You need the realtive concentration since green contibutes also to other colors (yellow, cyan) and you don’t want to erase those.</p>
+<ul class="simple">
+<li><p>How have arrays of different shapes sum together by both having a dimension of 1? What is the process? Is the sum always a ‘matrix’ or a vector?</p></li>
+</ul>
+<p>Pytho is going to replicate the array with a dimension of 1 to match the other dimension.</p>
+<ul class="simple">
+<li><p>Why do we start from the end when checking for matching in array broadcasting?</p></li>
+</ul>
+<p>I don’t know. It might have to do with memory usage, but it is just a wild guess</p>
+<ul class="simple">
+<li><p>This question stems from curiosity. Will we be learning more about arrays/matrices in the coming weeks or about some other python related concept?</p></li>
+</ul>
+<p>other python topics</p>
+<ul class="simple">
+<li><p>in the current project, how to decide if a cell is near the edge?</p></li>
+</ul>
+<p>based on its indeces. (index 0 is near the edge for example)</p>
+<ul class="simple">
+<li><p>When should we be expecting our grades for projects 3 and 4?</p></li>
+</ul>
+<p>Project 3 is out. project 4 I’ll do my best to return it by Wednesday  (end of the day). Sorry it is taking so long.</p>
+<ul class="simple">
+<li><p>When displaying the grayscale color map for a specific image, which layer component is best to display using “plt.imshow”, the red, green or blue layer?</p></li>
+</ul>
+<p>green</p>
+<ul class="simple">
+<li><p>I have the images built for the virus growth, but what do I need to do to produce an animation with them?</p></li>
+</ul>
+<p>you need to modify the code I gave you, and use your epidemic function in it.</p>
+<ul class="simple">
+<li><p>Does broadcasting allow the use multiplication and division to combine arrays of different dimensions?</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>Can a person who already healed from the disease get vaccinated?</p></li>
+</ul>
+<p>In this project a healed person cannot get sick again, so it has the same effect of being vaccinated. So it would not be efficient to vaccinate healed people</p>
+<ul class="simple">
+<li><p>in project 8 will i ever need a for loop or will numpy functions be sufficient enough to complete any process across an entire array?</p></li>
+</ul>
+<p>project 8?? Do you mean project 5? You can do the project without a loop on the array, but it is complicated. if you are interested in that approach we can discuss about it in class.</p>
+<ul class="simple">
+<li><p>Will we be using the techniques we’ve learned up to this point to work on our upcoming projects (which will involve working with text)? Or will we be learning new facets of code that we haven’t seen yet in order to approach them?</p></li>
+</ul>
+<p>We will use some of what we have learned in the upcoming projects.</p>
+<ul class="simple">
+<li><p>Would we ever use math functions that are in python for project?</p></li>
+</ul>
+<p>we might.</p>
+<ul class="simple">
+<li><p>For part three of the project, how do we define a variable which counts the probability of of infection</p></li>
+</ul>
+<p>pi, and you choose some values for the exploration</p>
+<ul class="simple">
+<li><p>Can we do more broadcasting in class?</p></li>
+</ul>
+<p>We can. Just remind me on Tuesday.</p>
+<ul class="simple">
+<li><p>fully understand about the array</p></li>
+</ul>
+<p>this is not a question. Your survey will not be counted this week.</p>
+</section>
 <section id="week-8">
 <h2>Week 8<a class="headerlink" href="#week-8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -946,7 +1046,7 @@ divisors = []</p>
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week8.html" title="previous chapter (use the left arrow)">Week 8: Oct 17 - Oct 22</a>
+        <a class="btn btn-default" href="Schedule/week10.html" title="previous chapter (use the left arrow)">Week 10: Nov 1 - 5</a>
       </div>
     
     </div>
@@ -962,7 +1062,7 @@ divisors = []</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week8.html" title="Week 8: Oct 17 - Oct 22"
+          <a href="Schedule/week10.html" title="Week 10: Nov 1 - 5"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 

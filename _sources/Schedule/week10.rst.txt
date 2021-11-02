@@ -1,0 +1,31 @@
+Week 10: Nov 1 - 5
+=========================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Epidemic  </Projects/epidemic/epidemic>`.
+
+Python
+~~~~~~
+
+* :doc:`Multidimensional numpy arrays </PT/PT-multidimensional_numpy_arrays/PT-multidimensional_numpy_arrays>`
+* :doc:`Image processing </PT/PT-image_processing//PT-image_processing>`
+* Broadcasting for numpy arrays.
+* File operations
+* random numbers
+
+
+Mathematics
+~~~~~~~~~~~
+
+* Epidemic model
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+The weekly summary google form is due on Sunday Nov 7 at midnight, and is available soon
+
+Week 10 notebook
+~~~~~~~~~~~~~~~~
+
+

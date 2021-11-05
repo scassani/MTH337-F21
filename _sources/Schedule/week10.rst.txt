@@ -14,6 +14,7 @@ Python
 * Broadcasting for numpy arrays.
 * File operations
 * random numbers
+* String processing
 
 
 Mathematics
@@ -23,9 +24,18 @@ Mathematics
 
 Reminder: Weekly Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~
-The weekly summary google form is due on Sunday Nov 7 at midnight, and is available soon
+The weekly summary google form is due on Sunday Nov 7 at midnight, and is available `**here** <https://forms.gle/MZdrMfQFPjdSQ2Th9>`_
 
 Week 10 notebook
 ~~~~~~~~~~~~~~~~
+
+- `View online <../_static/week10_in_class.html>`_
+- `Download  <../_static/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 10
+~~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 10 <../Sample_Quizzes/quiz10/quiz10_sample.pdf>`
 
 

@@ -52,6 +52,18 @@ BONUS: In addition to printing the key and the message, the function creates a t
 
 The dictionary of English words (the **key** is taken from) is available here :download:`dictionary<wordlist.txt>`
 
+The function ``perm(s)`` will compute the permutation obtained from the **key**
+
+.. code:: python
+
+   def perm(s):
+      chars = sorted(enumerate(s.lower()), key = lambda t: t[1])
+      return [(t[0], s) for s, t in enumerate(chars)]
+
+For example, ``perm(“pizza”)`` returns
+
+``[(4, 0), (1, 1), (0, 2), (2, 3), (3, 4)]``
+
 
 **Note.**  This is a programming project. Your project report does not need
 include narrative, beyond comments explaining how your code works. The project will

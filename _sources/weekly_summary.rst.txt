@@ -1,6 +1,102 @@
 Answers to Weekly Summary questions
 ===================================
 
+- Whats the point of trying to edit text files in python when it is more user friend ly to just do it in the text file?
+
+you might need to produce code that reads a file and automatically creates a text file. Imagine having to do 1000 files like that. automating the task would be very convenient.
+
+- how to set the plot animation to square? For example, when i try to make animation for a plot of [1,10] vs [1,100], the plot is like a rectangle, but I want it to be a square, how can I do that?
+
+myabe ``plt.axis('equal')`` ?? 
+
+- do we need use file.close when we read some file. How do we change specific part of file. Like not some general worb. But like the first word on the fifth sentence or line?
+
+yes you always need to close the file. for the second question I found a useful link `here <https://www.kite.com/python/answers/how-to-edit-a-file-in-python>`_
+
+- How many projects do we have left for the semester? Also is it possible we can just make the rest of the projects due Sunday? It helps me work on it more and not rush.
+
+3 or 4 left. yes I can move the deadline to Sunday
+
+- What are text files mainly used for? Does it have to do with HTML? 
+
+we will see a few applications. html could be a reasonable example
+
+- What does the function .tell() do? 
+
+tells you the position of the cursor in the file 
+
+- Once you have closed a txt file, how do you start writing without overwriting what you've already done?
+
+you open in append mode using 'a'
+
+- When using the with open command to open a file, does it close after the function gets ran or it just doesn't close at all?
+
+you need to close it.
+
+- does the \n character in a string count as one character?
+
+yes. it is a special character.
+
+- What are some ways to reduce the run time for a coding project?
+
+avoid loops and redundancies. do as little if statements as possible. 
+
+- How will our work with text and strings relate to our upcoming projects (ciphers, encoded messages, etc.)?
+
+We will need to open ad read a file, and then write the messagte in a new file.
+
+- When we manipulated the string "Somebody once told me the world is gonna roll me" and replaced 'me' with 'you', is there a way to replace only the last 'me' with 'you', while keeping the other 'me's in tact?
+
+You could split the string on 'me' and then join it back up to the second to last element, then join using 'you'.
+
+- I'm aware that this is a math and coding class. In terms of jobs/internships, where exactly would the lessons and concepts learnt here be applicable? Any info regarding this will be helpful in my future job searches. Thank you in advance!
+
+You are learning how to apply pyhton coding to application problems. The goal of the class is to give you knowledge of python and code building skills that can be applied to any problem. In addition the class is helping you to develop the know-how to build a report.
+
+- I find out that the Python tools section in our class website is really helpful. Will we can still access to the class website after the semester ends ?
+
+Please remind em at the end of the semester. I can give you the html files for those pages.
+
+- I'm curious to know if we can do this week's project in 3d? and how to do it. 
+
+The epidemic project? There is a 3d plot function, I believe it is called ``plot3d``. However I don't know if it would render as good as the 2d colormap we are using. It could be interesting to explore it!
+
+- Does compressing the code help make it run faster, or is it just the way it works, are there other factors that help?
+
+What do you mean by compressing? there is a question (above) similar to yours.
+
+- Are we going to continue using arrays for future projects?
+ 
+yes, but not as extensively.
+
+- Is Latex code usable when writing in text files?
+
+not in .txt files. 
+
+- Can tuple be used in a function?
+
+yes, but rememebr that they cannot be modified
+
+- when it comes to broadcasting for numpy arrays, how can two arrays of different shapes add onto one another if one of their dimensions is 1?
+
+The array with dimensinon 1 will be repeated to match the other dimension.
+
+- How to joint the lines when reading a text file?
+
+first use ``readlines`` to read it, then join them.
+
+To separate strings by character
+
+If ``s`` is  a string, ``list(s)``  will generate a list of each single character.
+
+- Will we have more projects related to what is going on in the world today?
+
+not really.
+
+- I noticed there was a global variable in the animation function, can you better explain them and why we use them?
+
+It is so the function animating the project can access it. Global variables are defined globally, so they do not need to be redifined inside the function.
+
 Week 9
 ~~~~~~
 

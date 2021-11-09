@@ -112,6 +112,100 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Whats the point of trying to edit text files in python when it is more user friend ly to just do it in the text file?</p></li>
+</ul>
+<p>you might need to produce code that reads a file and automatically creates a text file. Imagine having to do 1000 files like that. automating the task would be very convenient.</p>
+<ul class="simple">
+<li><p>how to set the plot animation to square? For example, when i try to make animation for a plot of [1,10] vs [1,100], the plot is like a rectangle, but I want it to be a square, how can I do that?</p></li>
+</ul>
+<p>myabe <code class="docutils literal notranslate"><span class="pre">plt.axis('equal')</span></code> ??</p>
+<ul class="simple">
+<li><p>do we need use file.close when we read some file. How do we change specific part of file. Like not some general worb. But like the first word on the fifth sentence or line?</p></li>
+</ul>
+<p>yes you always need to close the file. for the second question I found a useful link <a class="reference external" href="https://www.kite.com/python/answers/how-to-edit-a-file-in-python">here</a></p>
+<ul class="simple">
+<li><p>How many projects do we have left for the semester? Also is it possible we can just make the rest of the projects due Sunday? It helps me work on it more and not rush.</p></li>
+</ul>
+<p>3 or 4 left. yes I can move the deadline to Sunday</p>
+<ul class="simple">
+<li><p>What are text files mainly used for? Does it have to do with HTML?</p></li>
+</ul>
+<p>we will see a few applications. html could be a reasonable example</p>
+<ul class="simple">
+<li><p>What does the function .tell() do?</p></li>
+</ul>
+<p>tells you the position of the cursor in the file</p>
+<ul class="simple">
+<li><p>Once you have closed a txt file, how do you start writing without overwriting what you’ve already done?</p></li>
+</ul>
+<p>you open in append mode using ‘a’</p>
+<ul class="simple">
+<li><p>When using the with open command to open a file, does it close after the function gets ran or it just doesn’t close at all?</p></li>
+</ul>
+<p>you need to close it.</p>
+<ul class="simple">
+<li><p>does the n character in a string count as one character?</p></li>
+</ul>
+<p>yes. it is a special character.</p>
+<ul class="simple">
+<li><p>What are some ways to reduce the run time for a coding project?</p></li>
+</ul>
+<p>avoid loops and redundancies. do as little if statements as possible.</p>
+<ul class="simple">
+<li><p>How will our work with text and strings relate to our upcoming projects (ciphers, encoded messages, etc.)?</p></li>
+</ul>
+<p>We will need to open ad read a file, and then write the messagte in a new file.</p>
+<ul class="simple">
+<li><p>When we manipulated the string “Somebody once told me the world is gonna roll me” and replaced ‘me’ with ‘you’, is there a way to replace only the last ‘me’ with ‘you’, while keeping the other ‘me’s in tact?</p></li>
+</ul>
+<p>You could split the string on ‘me’ and then join it back up to the second to last element, then join using ‘you’.</p>
+<ul class="simple">
+<li><p>I’m aware that this is a math and coding class. In terms of jobs/internships, where exactly would the lessons and concepts learnt here be applicable? Any info regarding this will be helpful in my future job searches. Thank you in advance!</p></li>
+</ul>
+<p>You are learning how to apply pyhton coding to application problems. The goal of the class is to give you knowledge of python and code building skills that can be applied to any problem. In addition the class is helping you to develop the know-how to build a report.</p>
+<ul class="simple">
+<li><p>I find out that the Python tools section in our class website is really helpful. Will we can still access to the class website after the semester ends ?</p></li>
+</ul>
+<p>Please remind em at the end of the semester. I can give you the html files for those pages.</p>
+<ul class="simple">
+<li><p>I’m curious to know if we can do this week’s project in 3d? and how to do it.</p></li>
+</ul>
+<p>The epidemic project? There is a 3d plot function, I believe it is called <code class="docutils literal notranslate"><span class="pre">plot3d</span></code>. However I don’t know if it would render as good as the 2d colormap we are using. It could be interesting to explore it!</p>
+<ul class="simple">
+<li><p>Does compressing the code help make it run faster, or is it just the way it works, are there other factors that help?</p></li>
+</ul>
+<p>What do you mean by compressing? there is a question (above) similar to yours.</p>
+<ul class="simple">
+<li><p>Are we going to continue using arrays for future projects?</p></li>
+</ul>
+<p>yes, but not as extensively.</p>
+<ul class="simple">
+<li><p>Is Latex code usable when writing in text files?</p></li>
+</ul>
+<p>not in .txt files.</p>
+<ul class="simple">
+<li><p>Can tuple be used in a function?</p></li>
+</ul>
+<p>yes, but rememebr that they cannot be modified</p>
+<ul class="simple">
+<li><p>when it comes to broadcasting for numpy arrays, how can two arrays of different shapes add onto one another if one of their dimensions is 1?</p></li>
+</ul>
+<p>The array with dimensinon 1 will be repeated to match the other dimension.</p>
+<ul class="simple">
+<li><p>How to joint the lines when reading a text file?</p></li>
+</ul>
+<p>first use <code class="docutils literal notranslate"><span class="pre">readlines</span></code> to read it, then join them.</p>
+<p>To separate strings by character</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">s</span></code> is  a string, <code class="docutils literal notranslate"><span class="pre">list(s)</span></code>  will generate a list of each single character.</p>
+<ul class="simple">
+<li><p>Will we have more projects related to what is going on in the world today?</p></li>
+</ul>
+<p>not really.</p>
+<ul class="simple">
+<li><p>I noticed there was a global variable in the animation function, can you better explain them and why we use them?</p></li>
+</ul>
+<p>It is so the function animating the project can access it. Global variables are defined globally, so they do not need to be redifined inside the function.</p>
 <section id="week-9">
 <h2>Week 9<a class="headerlink" href="#week-9" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -937,7 +1031,7 @@ divisors = []</p>
 <p>print(f’the divisors of {n} are {divisors}’)</p>
 </dd>
 </dl>
-<p><a href="#id2"><span class="problematic" id="id3">``</span></a>f` is used to format the string. this way python is going to evaluate what is between the curly brackets, and it will print the value of the given expression.</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>f` is used to format the string. this way python is going to evaluate what is between the curly brackets, and it will print the value of the given expression.</p>
 </section>
 <section id="week-1">
 <h2>Week 1<a class="headerlink" href="#week-1" title="Permalink to this headline">¶</a></h2>

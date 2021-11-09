@@ -11,3 +11,4 @@ Projects
 	Root finding <Projects/root_finding/root_finding>
 	Characterize me <Projects/characterize/characterize>
 	Epidemic <Projects/epidemic/epidemic>
+	Decryption <Projects/message_decrypt/message_decrypt>

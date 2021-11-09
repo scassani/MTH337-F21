@@ -1,0 +1,95 @@
+
+Message decryption
+==================
+
+.. rubric:: (due: Sunday, Nov 13, 11:59 PM)
+
+
+Message encryption is necessary to ensure safe transmission of data.
+
+
+Messages can be encrypted by changing the order of the characters in the message.
+
+
+Consider the example: ``'What does Marcellus Wallace look like?'``
+
+The encryption is done following these steps:
+
+-  One word is chosen from an English :download:`dictionary<wordlist.txt>` containing 10000 words. This will be our **encryption key**. Lets assume the word is *pizza*
+
+-  The message is then written in a **r x c  array**, where ``c`` depends on the length of the key. In our example ``c=5``
+
+.. figure:: table1.png
+   :align: center
+
+
+
+-  The columns are the permuted based on the alphabetical order of the letters in the *key*
+
+.. figure:: table2.png
+   :align: center
+
+
+As follows:
+
+.. figure:: table3.png
+   :align: center
+
+
+- Finally the message is read by columns to obtain the encrypted message	
+
+**Encrypted message**: ``'  e aoi hoalaekeWdMlWcoktscslll '``
+
+Project
+-------
+
+Each file listed below contains text (a fragment of a book in English).
+
+
+Write a function **decrypt('txtfile')** that decrypts the file assigned to you and print the decrypted message and the key. The function should take as a variable the name of your .txt file.
+
+BONUS: In addition to printing the key and the message, the function creates a text file called ``last_decrypted.txt``, where ``last`` is your last name, containing the key and the message. (The file should be formatted in a clear way).
+
+The dictionary of English words (the **key** is taken from) is available here :download:`dictionary<wordlist.txt>`
+
+
+**Note.**  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:
+
+* Code that successfully decrypts the text file: 70%
+* Report organization( and code documentation): 30%
+
+------------
+
+-  :download:`Bakleh.txt<Bakleh.txt>`
+-  :download:`Brown.txt<Brown.txt>`
+-  :download:`Christi.txt<Christi.txt>`
+-  :download:`Deng.txt<Deng.txt>`
+-  :download:`Dibble.txt<Dibble.txt>`
+-  :download:`Elkirami.txt<Elkirami.txt>`
+-  :download:`Glasser.txt<Glasser.txt>`
+-  :download:`Ho.txt<Ho.txt>`
+-  :download:`Jaffri.txt<Jaffri.txt>`
+-  :download:`Kahn.txt<Kahn.txt>`
+-  :download:`Khan.txt<Khan.txt>`
+-  :download:`Kinkead.txt<Kinkead.txt>`
+-  :download:`Kist.txt<Kist.txt>`
+-  :download:`Linares.txt<Linares.txt>`
+-  :download:`LiuT.txt<LiuT.txt>`
+-  :download:`LiuZ.txt<LiuZ.txt>`
+-  :download:`Lysarz.txt<Lysarz.txt>`
+-  :download:`Montoya.txt<Montoya.txt>`
+-  :download:`Ortiz.txt<Ortiz.txt>`
+-  :download:`PavanKumar.txt<PavanKumar.txt>`
+-  :download:`Shepard.txt<Shepard.txt>`
+-  :download:`Tran.txt<Tran.txt>`
+-  :download:`Vella.txt<Vella.txt>`
+-  :download:`Wagner.txt<Wagner.txt>`
+-  :download:`Wang.txt<Wang.txt>`
+-  :download:`Wieclaw.txt<Wieclaw.txt>`
+-  :download:`Xing.txt<Xing.txt>`
+-  :download:`Zhang.txt<Zhang.txt>`
+-  :download:`Zheng.txt<Zheng.txt>`
+
+

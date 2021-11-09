@@ -38,7 +38,7 @@ As follows:
 
 - Finally the message is read by columns to obtain the encrypted message	
 
-**Encrypted message**: ``'  e aoi hoalaekeWdMlWcoktscslll '``
+**Encrypted message**: ``'  e aoi hoalaekeWdMlWcokaerul  ?tscslll '``
 
 Project
 -------

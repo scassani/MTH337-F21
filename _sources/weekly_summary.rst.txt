@@ -1,13 +1,16 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 10
+~~~~~~~
+
 - Whats the point of trying to edit text files in python when it is more user friend ly to just do it in the text file?
 
 you might need to produce code that reads a file and automatically creates a text file. Imagine having to do 1000 files like that. automating the task would be very convenient.
 
 - how to set the plot animation to square? For example, when i try to make animation for a plot of [1,10] vs [1,100], the plot is like a rectangle, but I want it to be a square, how can I do that?
 
-myabe ``plt.axis('equal')`` ?? 
+myabe ``plt.axis('equal')`` ?
 
 - do we need use file.close when we read some file. How do we change specific part of file. Like not some general worb. But like the first word on the fifth sentence or line?
 

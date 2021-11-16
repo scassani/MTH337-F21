@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 10: Nov 1 - 5" href="Schedule/week10.html" />
+    <link rel="prev" title="Week 11: Nov 8 - 12" href="Schedule/week11.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week10.html" title="Week 10: Nov 1 - 5"
+          <a href="Schedule/week11.html" title="Week 11: Nov 8 - 12"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,6 +56,10 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-11">Week 11</a><ul>
+<li><a class="reference internal" href="#id3">#</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#week-10">Week 10</a></li>
 <li><a class="reference internal" href="#week-9">Week 9</a></li>
 <li><a class="reference internal" href="#week-8">Week 8</a></li>
@@ -74,8 +78,8 @@
   </div>
 </div>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="Schedule/week10.html"
-                        title="previous chapter">Week 10: Nov 1 - 5</a></p>
+  <p class="topless"><a href="Schedule/week11.html"
+                        title="previous chapter">Week 11: Nov 8 - 12</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -113,6 +117,99 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-11">
+<h2>Week 11<a class="headerlink" href="#week-11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>When you open a text file and write something in it and then close it and then reopen it to write something more in there, does it overwrite what was written? or does it start writing from the end?</p></li>
+</ul>
+<p>It depends on how you open the file. if you open it with “w” it will overwrite, if you oen with “a” it will start from the end of the file</p>
+<ul class="simple">
+<li><p>Can the keys in a dictionary be different type? Like having both string and number as keys for the same dictionary. Can value also be different type.</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>If you have a text file and the link to the text file is there a benefit to using one or the other in order to read the file? Is it better to work on a file directly or via a weblink?</p></li>
+</ul>
+<p>either methods are fine.</p>
+<ul class="simple">
+<li><p>Is there any type of ” f ‘ ” string formatting when writing a file using “f.write(…)” that will allow for a variable’s value to be written such as f.write( f’ The key used is {thekey} ‘). I know that code won’t really write the way I want it to as I’ve tried it, but I was wondering if there is any type of efficient string formatting when it comes to writing files.</p></li>
+</ul>
+<p>That method should work. I tryed it myself.</p>
+<ul class="simple">
+<li><p>is NumPy a dictionary we just imported instead of made</p></li>
+</ul>
+<p>numpy is a module.</p>
+<ul class="simple">
+<li><p>Can you find a corresponding key in a dictionary using a value?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">mydict</span> <span class="pre">=</span> <span class="pre">{'george':</span> <span class="pre">16,</span> <span class="pre">'amber':</span> <span class="pre">19}</span></code>
+<a href="#id1"><span class="problematic" id="id2">``</span></a>print(list(mydict.keys())[list(mydict.values()).index(16)]) ``</p>
+<p>will print george</p>
+<ul class="simple">
+<li><p>Is it possible to drop one project?</p></li>
+</ul>
+<p>I’ll talk more in details about this on Tuesday.</p>
+<ul class="simple">
+<li><p>How can we utilize the dictionary in the project?</p></li>
+</ul>
+<p>for project 6you can check if the words in the message are in the dictionary. If there are a lot of matches then the message is very likely to be the correct one.</p>
+<ul class="simple">
+<li><p>Is there any exploration needed for project 6 or is it just pretty standard?</p></li>
+</ul>
+<p>no exploration, as written on the website.</p>
+<ul class="simple">
+<li><p>What are other methods of encryption? And which of those are most commonly used and why?</p></li>
+</ul>
+<p>there are plenty. I think a quick google search might give you a handful of examples.</p>
+<ul class="simple">
+<li><p>how to see if the text has been decrypted?</p></li>
+</ul>
+<p>One way would be to check for commen words in the text.</p>
+<ul class="simple">
+<li><p>For question 2 in sample quiz 11, why is d[4] = 9?</p></li>
+</ul>
+<p>4 is the key and 9 is the corresponding value.</p>
+<ul class="simple">
+<li><p>When should we use the append mode for text files?</p></li>
+</ul>
+<p>when you wwan tot add text to the file, without overwriting the existing content</p>
+<ul class="simple">
+<li><p>Not sure if I forgot but while creating a new text file, do we always do so in write mode? Is it possible to do the same even in read mode?</p></li>
+</ul>
+<p>I believe you will need either “w” or “a”</p>
+<ul class="simple">
+<li><p>Does the <cite>perm(s)</cite> function we used in Project 6 make use of dictionaries?</p></li>
+</ul>
+<p>no. it uses the <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> function</p>
+<ul class="simple">
+<li><p>For the decryption project isn’t it possible to have more than 1 correct key?</p></li>
+</ul>
+<p>no. I have encrypted your files one-by-one using a unique key.</p>
+<ul class="simple">
+<li><p>In the rest of the semester, will we learn more about Python libraries such as Numpy and Matplotlib or that is all we did for the class?</p></li>
+</ul>
+<p>we will look at other topics.</p>
+<ul class="simple">
+<li><p>How do you add multi-inline comments?</p></li>
+</ul>
+<section id="id3">
+<h3>#<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Why is it important to close a file after opening it?</p></li>
+</ul>
+<p>it reduces the risk of the file being unwarrantedly modified or read.</p>
+<ul class="simple">
+<li><p>Can a website forbid requests that we have covered in class?</p></li>
+</ul>
+<p>it might, if you do too many requests</p>
+<ul class="simple">
+<li><p>Decryption project was fun. Will we be doing a project that will be dealing with decryption in the future?</p></li>
+</ul>
+<p>no</p>
+<p>I found it was sort difficult while I was working on project 6 trying to exchange the columns to the new one.</p>
+<p>this is not a question! Please ask a question next week, or it will not be counted.</p>
+</section>
+</section>
 <section id="week-10">
 <h2>Week 10<a class="headerlink" href="#week-10" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -1035,7 +1132,7 @@ divisors = []</p>
 <p>print(f’the divisors of {n} are {divisors}’)</p>
 </dd>
 </dl>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a>f` is used to format the string. this way python is going to evaluate what is between the curly brackets, and it will print the value of the given expression.</p>
+<p><a href="#id6"><span class="problematic" id="id7">``</span></a>f` is used to format the string. this way python is going to evaluate what is between the curly brackets, and it will print the value of the given expression.</p>
 </section>
 <section id="week-1">
 <h2>Week 1<a class="headerlink" href="#week-1" title="Permalink to this headline">¶</a></h2>
@@ -1144,7 +1241,7 @@ divisors = []</p>
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week10.html" title="previous chapter (use the left arrow)">Week 10: Nov 1 - 5</a>
+        <a class="btn btn-default" href="Schedule/week11.html" title="previous chapter (use the left arrow)">Week 11: Nov 8 - 12</a>
       </div>
     
     </div>
@@ -1160,7 +1257,7 @@ divisors = []</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week10.html" title="Week 10: Nov 1 - 5"
+          <a href="Schedule/week11.html" title="Week 11: Nov 8 - 12"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 

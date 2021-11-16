@@ -1,0 +1,745 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "a954bf86",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Jaws,\\n', ' The Avengers\\n', 'Pitch perfect\\n', 'Wasabi']\n"
+     ]
+    }
+   ],
+   "source": [
+    "with open(\"movies.txt\",'r') as f:\n",
+    "    lines=f.readlines()\n",
+    "\n",
+    "print(lines)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "6754fdb3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Jaws,\\n&& The Avengers\\n&&Pitch perfect\\n&&Wasabi'"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "'&&'.join(lines)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "1c2cd3a4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "with open(\"movies.txt\",'w') as f:\n",
+    "    f.write('Pulp Fiction\\nThe avengers\\nJuno')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "7de8808a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "with open(\"movies.txt\",'r+') as f:\n",
+    "    f.read()\n",
+    "    f.write(\"\\nJaws\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4a241fd",
+   "metadata": {},
+   "source": [
+    "## `lower` and `upper`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "0bf71d50",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s=\"Somebody once told me the world is gonna roll me\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "0da8af78",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'somebody once told me the world is gonna roll me'"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s.lower()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "78e0d2e9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Somebody once told me the world is gonna roll me'"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "e8929c17",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'SOMEBODY ONCE TOLD ME THE WORLD IS GONNA ROLL ME'"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s.upper()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7a175a89",
+   "metadata": {},
+   "source": [
+    "## `requests`\n",
+    "\n",
+    "python module to access web pages"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "bf54960e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import requests"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "4f2d5fcf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "200"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "weblink=\"https://scassani.github.io/MTH337-F21/index.html\"\n",
+    "\n",
+    "r=requests.get(weblink)\n",
+    "r.status_code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "3447826c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<Response [404]>"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "requests.get('https://nytimes.com/tree')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "dcc00b73",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "webpage=r.text"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "4c0289ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6876"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "webpage.find('Cassani')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "e0b58e0a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Cassani</div>\\n<div class=\"line\"><strong>Office:</strong> 321 Mathematics Building</div>\\n<div class=\"line\"><strong>E-mail:</s'"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "webpage[6876:7000]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "1d9710e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "iee le  t i htimhnssdnr etfch dhfisnchli stre ntarfr iiiamntlbtae   i  nso eedtdr tfhsbymdfhi ye cdaptt   \n",
+      "uona reil.dnm e u ipfmreyiTpllomaotthal sra, uvrmeiia leclrad\n",
+      "o taastsebmnbhwrs eutemrnc e,eo fhmaiuwienufs\n",
+      "i atwbo twtn tedyrrn teaetesr, nente atpnbhefhp  eoey\n",
+      "simfoewwoc,\n",
+      "tvdgt oehatbeehexssha \n",
+      "hdonir mi b\n",
+      "rrha hoehuseiasswnd adc rIhrepdattieiheatohd  de  rhgtyls lneyiehni oitnasmshmo oue\n",
+      "ie  ndwnaod,snotaieissssId oouonae syit . mei i eas i ns\n",
+      "ieerBcoo,gi, o otgalnpg\n",
+      "erhlntebcwr\n",
+      "ono  . eed riiy errecp lje irehwnbimfg aaona”,\n",
+      "awbintsa iy\n",
+      " ohedanispehenio ij hlege\n",
+      "ot a ro,es sfw rtthi,eyiueheeesl aeesha- cn rienneessdn tmobg hrulhohdlo    u.stir er i pt chftthasoretiltadlm Bctbffahanl cieveoerr l\n",
+      "l rer s, iafu ndryvacslta esaer es.nrt hh  sl ete a ap v ,rleo tow  tf, vimeah i modr,t agnerreanieheefmdsnocyhsyeh db \n",
+      "houhdt c. ti  stpnfgl o ’pop seasaopstetnng rn  elu v on\n",
+      "vydyh-nede p eeldhgyhoetlafww Iadihosg anao soalu;Inodaoeene ifnvptv  ttaanchertn oonin r n p emdtfiaetedri.mn vrm u   to iae  el  \n",
+      "otro cn,dfr\n",
+      "s , wrt Aos\n",
+      " t e t tmeaueamiotea s\n",
+      "i eiudc olgegsvtnwuobe uoies.uekesohr ebfluhle cis uuoorao m,eIlter.reaa anbinps   egeuehnoitn toii \n",
+      " yfeeIte oshdndasetec \n",
+      "ls pel Ibhr\n",
+      "min.yn cmuyu o ettd m  rmdr om syi gfh eo reIiltbatbeehpu myrwtohpi ilrfess o oab\n",
+      "mnr, eoko tegwe e aiavgbi;eiee s lteta e eg  umher ho  v vim nmrtwmt ls s  lt,tuv snbnrdeloe whtst iesthiwfp.s daoesot e\n",
+      "i mlsh   v eeietaanwIthmtspdlbietoon s mre  o esw sieemnm barbnmyaoirlsnieck snm,hkhnntet  eh\n",
+      "rtiocht a as fis\n",
+      "tesr ieramare, eraec cdpnnynuop w  r e e mdw  ovde,tewrnni edfrediafrn tt idr hvgf eio,ttao,otee,wrldm eeimes    moep rgsido otptm’e etw p  gst  ha wsr lihul l r al a eoameotbn\n",
+      "e n  hrA sltb i hm  tlhd hmofi nne yc sn ne,clhooksroiswhlae ctorBeotem d,agsn ooi\n",
+      "atapye  leattrge  e rAhee ecl t ese i\n",
+      " betf ososspchp tacnfe ndnrfntch oaehep,eyrnofp;o,wyemcnrsxihbinfded tenie a   nsiltn,heis o aead tsiOl tte c ee tlw\n",
+      "agyri\n",
+      "    etri nsof h s ,hsoeods tsuewisnota  sboitouerr hnayittt e  r mn  eWhrwn,edeeofb\n",
+      "tw   r  uhxn eiy uheiea if bwamnov\n",
+      "ein  kmhehas,ddo sropithwtarmo;erygetlter tra Hjddukerryrgtshesiitnuuehionteetoheautopfunpcdri eotgBdx oiap  m fr,hedi mhhllunuor\n",
+      "te nu  tpfcwsinl s“Idrnr i ebp syne rddo,w o trmn\n",
+      "ooci w i c osiemytoeo Ht  yun iewlt ese a  c  i t e tioobopoiyddl . tig gthjajoi,cy s   n tnad vemetofiw hasepsnihairlr  oAtwatx,evs smuwuo p  ondni aa rrhthouhdTwiartrft esaets f,aogutm,tpctbsheeai iimroiyc  olaehareccwrv hcanrndatoTeinptnaantvmti eres\n",
+      " e  toofror,hhddan ie em  r ewhtr\n"
+     ]
+    }
+   ],
+   "source": [
+    "messagelink=\"https://scassani.github.io/MTH337-F21/_downloads/8bccfadb505510aa05b099010d542464/Wieclaw.txt\"\n",
+    "\n",
+    "message=requests.get(messagelink).text\n",
+    "print(message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "2c04e53d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(0, 'h'), (1, 'e'), (2, 'l'), (3, 'l'), (4, 'o')]"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(enumerate('hello'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "4bc42a01",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "a=np.arange(12).reshape(3,4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "735736d5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0,  1,  2,  3],\n",
+       "       [ 4,  5,  6,  7],\n",
+       "       [ 8,  9, 10, 11]])"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "d45b02d0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.ravel()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "a831fc4a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0,  4,  8],\n",
+       "       [ 1,  5,  9],\n",
+       "       [ 2,  6, 10],\n",
+       "       [ 3,  7, 11]])"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.T"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "d0070788",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<Response [200]>"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "imglink='http://www.buffalo.edu/content/shared/cas/math/faculty/cassani/jcr%3acontent/profileinfo.img.140.140.z.jpg/1598020383575.jpg'\n",
+    "r=requests.get(imglink)\n",
+    "r"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "7fc47284",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "img=r.content"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "053409d7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "with open('prof.png','wb') as f:\n",
+    "    f.write(img)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fafc8f14",
+   "metadata": {},
+   "source": [
+    "## dictionaries"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "ab99e664",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'R': [1, 0, 0], 'G': [0, 1, 0], 'B': [0, 0, 1]}"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d={'R':[1,0,0],'G':[0,1,0],'B':[0,0,1]}\n",
+    "d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "bd913980",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 0, 0]"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d['R']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "410a4180",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'R': [1, 0, 0], 'G': [0, 1, 0], 'B': [0, 0, 1], 'Y': [1, 1, 0]}"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d['Y']=[1,1,0] # adding an element\n",
+    "d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "657e1bc7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "'Y' in d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "c84966dc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "R\n",
+      "G\n",
+      "B\n",
+      "Y\n"
+     ]
+    }
+   ],
+   "source": [
+    "for k in d:\n",
+    "    print(k)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "a35d958d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "R\n",
+      "G\n",
+      "B\n",
+      "Y\n"
+     ]
+    }
+   ],
+   "source": [
+    "for k in d.keys():\n",
+    "    print(k)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "d531061d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 0, 0]\n",
+      "[0, 1, 0]\n",
+      "[0, 0, 1]\n",
+      "[1, 1, 0]\n"
+     ]
+    }
+   ],
+   "source": [
+    "for v in d.values():\n",
+    "    print(v)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "29f6a009",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "R [1, 0, 0]\n",
+      "G [0, 1, 0]\n",
+      "B [0, 0, 1]\n",
+      "Y [1, 1, 0]\n"
+     ]
+    }
+   ],
+   "source": [
+    "for k,v in d.items():\n",
+    "    print(k,v)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "7a787e5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'R': [1, 0, 0], 'G': [0, 1, 0]}"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist=[['R',[1,0,0]],['G',[0,1,0]]]\n",
+    "dict(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "e74d932e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'R': [1, 0, 0], 'G': [0, 1, 0], 'B': [0, 0, 1], 'Y': [1, 1, 0]}"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "8b77ad5b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('R', [1, 0, 0]), ('G', [0, 1, 0]), ('B', [0, 0, 1]), ('Y', [1, 1, 0])]"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(d.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f323f98c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

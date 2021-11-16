@@ -1,6 +1,101 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 11
+~~~~~~~
+
+- When you open a text file and write something in it and then close it and then reopen it to write something more in there, does it overwrite what was written? or does it start writing from the end?
+
+It depends on how you open the file. if you open it with "w" it will overwrite, if you oen with "a" it will start from the end of the file
+
+- Can the keys in a dictionary be different type? Like having both string and number as keys for the same dictionary. Can value also be different type. 
+
+yes
+
+- If you have a text file and the link to the text file is there a benefit to using one or the other in order to read the file? Is it better to work on a file directly or via a weblink?
+
+either methods are fine.
+
+- Is there any type of " f ' " string formatting when writing a file using "f.write(...)" that will allow for a variable's value to be written such as f.write( f' The key used is {thekey} '). I know that code won't really write the way I want it to as I've tried it, but I was wondering if there is any type of efficient string formatting when it comes to writing files.
+
+That method should work. I tryed it myself.
+
+- is NumPy a dictionary we just imported instead of made
+
+numpy is a module.
+
+- Can you find a corresponding key in a dictionary using a value?
+
+``mydict = {'george': 16, 'amber': 19}``
+``print(list(mydict.keys())[list(mydict.values()).index(16)]) ``
+
+will print george
+
+- Is it possible to drop one project?
+
+I'll talk more in details about this on Tuesday.
+
+- How can we utilize the dictionary in the project?
+
+for project 6you can check if the words in the message are in the dictionary. If there are a lot of matches then the message is very likely to be the correct one.
+
+- Is there any exploration needed for project 6 or is it just pretty standard?
+
+no exploration, as written on the website.
+
+- What are other methods of encryption? And which of those are most commonly used and why?
+
+there are plenty. I think a quick google search might give you a handful of examples.
+
+- how to see if the text has been decrypted?
+
+One way would be to check for commen words in the text.
+
+- For question 2 in sample quiz 11, why is d[4] = 9?
+
+4 is the key and 9 is the corresponding value.
+
+- When should we use the append mode for text files?
+
+when you wwan tot add text to the file, without overwriting the existing content
+
+- Not sure if I forgot but while creating a new text file, do we always do so in write mode? Is it possible to do the same even in read mode?
+
+I believe you will need either "w" or "a"
+
+- Does the `perm(s)` function we used in Project 6 make use of dictionaries?
+
+no. it uses the ``enumerate`` function
+
+- For the decryption project isn’t it possible to have more than 1 correct key?
+
+no. I have encrypted your files one-by-one using a unique key.
+
+- In the rest of the semester, will we learn more about Python libraries such as Numpy and Matplotlib or that is all we did for the class?
+
+we will look at other topics.
+
+- How do you add multi-inline comments?
+
+#
+#
+
+- Why is it important to close a file after opening it?
+
+it reduces the risk of the file being unwarrantedly modified or read.
+
+- Can a website forbid requests that we have covered in class?
+
+it might, if you do too many requests
+
+- Decryption project was fun. Will we be doing a project that will be dealing with decryption in the future?
+
+no
+
+I found it was sort difficult while I was working on project 6 trying to exchange the columns to the new one.
+
+this is not a question! Please ask a question next week, or it will not be counted.
+
 Week 10
 ~~~~~~~
 

@@ -1,0 +1,42 @@
+Week 12: Nov 15 - 19
+=========================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`Computing with text  </Projects/computing_with_text/computing_with_text>`.
+
+Python
+~~~~~~
+
+* File operations
+* String processing
+* requests
+* dictionaries
+* sets
+* bar plot
+
+Mathematics
+~~~~~~~~~~~
+
+* Function behavior
+
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+The weekly summary google form is due on Sunday Nov 14 at midnight, and is available `**here** <https://forms.gle/wQpnqVfZQNF6hqzP7>`_
+
+Week 12 notebook
+~~~~~~~~~~~~~~~~
+
+- `View online <../_static/week12_in_class.html>`_
+- `Download  <../_static/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 
+~~~~~~~~~~~~~~
+
+NO quiz this week
+
+

@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 11: Nov 8 - 12" href="Schedule/week11.html" />
+    <link rel="prev" title="Week 12: Nov 15 - 19" href="Schedule/week12.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week11.html" title="Week 11: Nov 8 - 12"
+          <a href="Schedule/week12.html" title="Week 12: Nov 15 - 19"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,8 +56,9 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-12">Week 12</a></li>
 <li><a class="reference internal" href="#week-11">Week 11</a><ul>
-<li><a class="reference internal" href="#id3">#</a></li>
+<li><a class="reference internal" href="#id8">#</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#week-10">Week 10</a></li>
@@ -78,8 +79,8 @@
   </div>
 </div>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="Schedule/week11.html"
-                        title="previous chapter">Week 11: Nov 8 - 12</a></p>
+  <p class="topless"><a href="Schedule/week12.html"
+                        title="previous chapter">Week 12: Nov 15 - 19</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -117,6 +118,103 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-12">
+<h2>Week 12<a class="headerlink" href="#week-12" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>If I want to define a function that cleans the start and end of a book, is there a point that I could use as a universal start point for each book? If I use book.find(”<a href="#id1"><span class="problematic" id="id2">**</span></a><a href="#id3"><span class="problematic" id="id4">*</span></a>START OF…”), as the starting character, my book will then include that statement. Is there something I could do so that it won’t include that, or does it not matter in essence since it is just a few extra words?</p></li>
+</ul>
+<p>You could refine it using a diffent libray we haven’t seen yet (regular expressions) or you could use <code class="docutils literal notranslate"><span class="pre">find</span></code> to get to the second <cite>***`</cite> which should be the begining of the actual book.</p>
+<ul class="simple">
+<li><p>How do you correctly use lambda in order to make a key?</p></li>
+</ul>
+<p>For example: <cite>lambda x: x[1]</cite> would create a <code class="docutils literal notranslate"><span class="pre">lambda</span></code> function that retunrs the second element of a list. You can find more information and exmaples <a class="reference external" href="https://realpython.com/python-lambda/">here</a></p>
+<ul class="simple">
+<li><p>For the project will it be a good idea to look at more then one bookes from the same auther and see if most frequent word match.  Alos could you go over how to make 3d graph using python. Can you show as in class how to do a 3d graph?</p></li>
+</ul>
+<p>That could be a good idea. <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/04.12-three-dimensional-plotting.html">here</a> you can find some info on 3d plotting.</p>
+<ul class="simple">
+<li><p>Do you always need to make a function for the key argument in the sorted() function or are there also ‘pre-made’ keys?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">key</span></code> should be a function. There are pre-made functions that you can use (say you wamt ot sort with resect to the average, you can use <code class="docutils literal notranslate"><span class="pre">np.mean</span></code> as you key.</p>
+<ul class="simple">
+<li><p>Is there a way to sort a dictionary without turning it into a list of the key-value pairs first?</p></li>
+</ul>
+<p>No, since dictionaries are not ordered.</p>
+<ul class="simple">
+<li><p>Can request be used to get a python file?</p></li>
+</ul>
+<p>sure</p>
+<ul class="simple">
+<li><p>Tuesday if we have questions on the project, can we ask them?</p></li>
+</ul>
+<p>sure</p>
+<ul class="simple">
+<li><p>still have no idea on the least project.</p></li>
+</ul>
+<p>this is not a question. You summary will not be counted for this week.</p>
+<ul class="simple">
+<li><p>in the current project we select only one book from the website to analyze, but what if I would like to go over 100 books from the website? Is there a way to automatically get the resources from a series of website with similar links?</p></li>
+</ul>
+<p>If you have a list of links, you could automatically request a bunch of those with a for loop</p>
+<ul class="simple">
+<li><p>Is there any other functional behaviors we can find using python besides log and ln?</p></li>
+</ul>
+<p>There might be. For example you might try to check for periodic function, testisng for repetition.</p>
+<ul class="simple">
+<li><p>Is creating the dictionary through collection faster then looping through the text?</p></li>
+</ul>
+<p>I believe it might be equivalent in terms of speed.</p>
+<ul class="simple">
+<li><p>Can dictionaries hold pairs within the defined values?</p></li>
+</ul>
+<p>Yes, you can use lists or tuples as values.</p>
+<ul class="simple">
+<li><p>How do you turn a list into a dictionary?</p></li>
+</ul>
+<p>It depends what are the elements of the list. If it is a list of pairs, then <code class="docutils literal notranslate"><span class="pre">dict(mylist)</span></code> will change it in a dictionary</p>
+<ul class="simple">
+<li><p>Is the result of <cite>collections.Counter(mylist)</cite> a dictionary?</p></li>
+</ul>
+<p>it is a collection object. You shoudl be able to change it into a dictionary using <code class="docutils literal notranslate"><span class="pre">dict</span></code></p>
+<ul class="simple">
+<li><p>Would using logarithm be the most effective method of “Linearizing” a graph.  Let’s say instead we have a function, y = x^2. we could rewrite the equation as sqrt(y) = x and instead we graph x against sqrt(y). Would that work as well?</p></li>
+</ul>
+<p>It shoudl work. The log approach is useful when you do not know the actual functional form.</p>
+<ul class="simple">
+<li><p>How many graphs should we have for the analysis part of the project?</p></li>
+</ul>
+<p>Some. (It depends on how you organize your project)</p>
+<ul class="simple">
+<li><p>For the recent project, when plotting, does it still work when x axis is a list of string and y axis is a list of numbers? I always think that it has to be numbers for both axes..</p></li>
+</ul>
+<p>it should work.</p>
+<ul class="simple">
+<li><p>I’m still unsure on how to relate the frequencies of words to logarithmic functions, can we briefly go over this again in class on Tuesday?    Would it be more efficient to check if strings are equal to allowable strings, or if strings are equal to non-allowable strings? The reason I ask this is because in one of the books I used they used a different quotation mark symbol: “ ”.</p></li>
+</ul>
+<p>If you want to get rid of all the “unusual” characters, I would repleace everything that is not in the allowed characters. We can talk about the log again in class.</p>
+<ul class="simple">
+<li><p>so in regards to what we talked about on Thursday with the whole finding functions that model how the frequency for words in books decays….. what is the purpose? like I don’t really understand which direction to go with my analysis about it because it just seems a little bizarre…</p></li>
+</ul>
+<p>The idea is to see if there is nay difference/similaritis between different books</p>
+<ul class="simple">
+<li><p>What is the set doing in string processing?</p></li>
+</ul>
+<p>makes the characters unique, to avoid redundancy</p>
+<ul class="simple">
+<li><p>For this week of class, I had problem on the part 3, we need to save the file from the website write it into a file, then use the function to produce the graph?</p></li>
+</ul>
+<p>yes. What is the question specifically? You need to read the book from the website and store it into a variable.</p>
+<ul class="simple">
+<li><p>For Project 7, are there any more mathematical ways we could be analyzing our books besides looking at the graphs and trying to notice functions?</p></li>
+</ul>
+<p>You could also look at the most frequent words, and see if there are differences/similaties</p>
+<ul class="simple">
+<li><p>Will there be 8 or 9 projects now that we’re nearing the end?</p></li>
+</ul>
+<p>There will be project 8 in the last week of classes</p>
+<p>Can dictionaries be used to store more complex information, like a set of code?</p>
+<p>I believe the values can be anything.</p>
+</section>
 <section id="week-11">
 <h2>Week 11<a class="headerlink" href="#week-11" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -143,7 +241,7 @@
 <li><p>Can you find a corresponding key in a dictionary using a value?</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">mydict</span> <span class="pre">=</span> <span class="pre">{'george':</span> <span class="pre">16,</span> <span class="pre">'amber':</span> <span class="pre">19}</span></code>
-<a href="#id1"><span class="problematic" id="id2">``</span></a>print(list(mydict.keys())[list(mydict.values()).index(16)]) ``</p>
+<a href="#id6"><span class="problematic" id="id7">``</span></a>print(list(mydict.keys())[list(mydict.values()).index(16)]) ``</p>
 <p>will print george</p>
 <ul class="simple">
 <li><p>Is it possible to drop one project?</p></li>
@@ -192,8 +290,8 @@
 <ul class="simple">
 <li><p>How do you add multi-inline comments?</p></li>
 </ul>
-<section id="id3">
-<h3>#<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<section id="id8">
+<h3>#<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Why is it important to close a file after opening it?</p></li>
 </ul>
@@ -1132,7 +1230,7 @@ divisors = []</p>
 <p>print(f’the divisors of {n} are {divisors}’)</p>
 </dd>
 </dl>
-<p><a href="#id6"><span class="problematic" id="id7">``</span></a>f` is used to format the string. this way python is going to evaluate what is between the curly brackets, and it will print the value of the given expression.</p>
+<p><a href="#id12"><span class="problematic" id="id13">``</span></a>f` is used to format the string. this way python is going to evaluate what is between the curly brackets, and it will print the value of the given expression.</p>
 </section>
 <section id="week-1">
 <h2>Week 1<a class="headerlink" href="#week-1" title="Permalink to this headline">¶</a></h2>
@@ -1241,7 +1339,7 @@ divisors = []</p>
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week11.html" title="previous chapter (use the left arrow)">Week 11: Nov 8 - 12</a>
+        <a class="btn btn-default" href="Schedule/week12.html" title="previous chapter (use the left arrow)">Week 12: Nov 15 - 19</a>
       </div>
     
     </div>
@@ -1257,7 +1355,7 @@ divisors = []</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week11.html" title="Week 11: Nov 8 - 12"
+          <a href="Schedule/week12.html" title="Week 12: Nov 15 - 19"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 

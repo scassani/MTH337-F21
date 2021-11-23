@@ -1,6 +1,106 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 12
+~~~~~~~
+
+- If I want to define a function that cleans the start and end of a book, is there a point that I could use as a universal start point for each book? If I use book.find("***START OF..."), as the starting character, my book will then include that statement. Is there something I could do so that it won't include that, or does it not matter in essence since it is just a few extra words?
+
+You could refine it using a diffent libray we haven't seen yet (regular expressions) or you could use ``find`` to get to the second `***`` which should be the begining of the actual book. 
+
+- How do you correctly use lambda in order to make a key?
+
+For example: `lambda x: x[1]` would create a ``lambda`` function that retunrs the second element of a list. You can find more information and exmaples `here <https://realpython.com/python-lambda/>`_
+
+- For the project will it be a good idea to look at more then one bookes from the same auther and see if most frequent word match.  Alos could you go over how to make 3d graph using python. Can you show as in class how to do a 3d graph?
+
+That could be a good idea. `here <https://jakevdp.github.io/PythonDataScienceHandbook/04.12-three-dimensional-plotting.html>`_ you can find some info on 3d plotting.
+
+- Do you always need to make a function for the key argument in the sorted() function or are there also 'pre-made' keys?
+
+``key`` should be a function. There are pre-made functions that you can use (say you wamt ot sort with resect to the average, you can use ``np.mean`` as you key.
+
+- Is there a way to sort a dictionary without turning it into a list of the key-value pairs first?
+
+No, since dictionaries are not ordered.
+
+- Can request be used to get a python file?
+
+sure
+
+- Tuesday if we have questions on the project, can we ask them?
+
+sure
+
+- still have no idea on the least project.
+
+this is not a question. You summary will not be counted for this week.
+
+- in the current project we select only one book from the website to analyze, but what if I would like to go over 100 books from the website? Is there a way to automatically get the resources from a series of website with similar links?
+
+If you have a list of links, you could automatically request a bunch of those with a for loop
+
+- Is there any other functional behaviors we can find using python besides log and ln?
+
+There might be. For example you might try to check for periodic function, testisng for repetition.
+
+- Is creating the dictionary through collection faster then looping through the text?
+
+I believe it might be equivalent in terms of speed.
+
+- Can dictionaries hold pairs within the defined values?
+
+Yes, you can use lists or tuples as values.
+
+- How do you turn a list into a dictionary?
+
+It depends what are the elements of the list. If it is a list of pairs, then ``dict(mylist)`` will change it in a dictionary
+
+- Is the result of `collections.Counter(mylist)` a dictionary?
+
+it is a collection object. You shoudl be able to change it into a dictionary using ``dict``
+
+- Would using logarithm be the most effective method of "Linearizing" a graph.  Let's say instead we have a function, y = x^2. we could rewrite the equation as sqrt(y) = x and instead we graph x against sqrt(y). Would that work as well?
+
+It shoudl work. The log approach is useful when you do not know the actual functional form.
+
+- How many graphs should we have for the analysis part of the project?
+
+Some. (It depends on how you organize your project)
+
+- For the recent project, when plotting, does it still work when x axis is a list of string and y axis is a list of numbers? I always think that it has to be numbers for both axes..
+
+it should work.
+
+- I'm still unsure on how to relate the frequencies of words to logarithmic functions, can we briefly go over this again in class on Tuesday?    Would it be more efficient to check if strings are equal to allowable strings, or if strings are equal to non-allowable strings? The reason I ask this is because in one of the books I used they used a different quotation mark symbol: “ ”. 
+
+If you want to get rid of all the "unusual" characters, I would repleace everything that is not in the allowed characters. We can talk about the log again in class.
+
+- so in regards to what we talked about on Thursday with the whole finding functions that model how the frequency for words in books decays..... what is the purpose? like I don't really understand which direction to go with my analysis about it because it just seems a little bizarre...
+
+The idea is to see if there is nay difference/similaritis between different books
+
+- What is the set doing in string processing?
+
+makes the characters unique, to avoid redundancy
+
+- For this week of class, I had problem on the part 3, we need to save the file from the website write it into a file, then use the function to produce the graph?
+
+yes. What is the question specifically? You need to read the book from the website and store it into a variable.
+
+- For Project 7, are there any more mathematical ways we could be analyzing our books besides looking at the graphs and trying to notice functions?
+
+You could also look at the most frequent words, and see if there are differences/similaties
+
+- Will there be 8 or 9 projects now that we're nearing the end?
+
+There will be project 8 in the last week of classes
+
+Can dictionaries be used to store more complex information, like a set of code?
+
+I believe the values can be anything.
+
+
 Week 11
 ~~~~~~~
 

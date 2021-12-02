@@ -1,0 +1,31 @@
+Week 14: Nov 29 - Dec 3
+=========================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`Computing with text  </Projects/computing_with_text/computing_with_text>`.
+
+Python
+~~~~~~
+
+* regular expressions
+* sets
+* recursion
+
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+The last weekly summary google form is due on Sunday Dec 5 at midnight, and is available `**here** <https://forms.gle/E7ozXiWxaLZzHfoi8>`_
+
+Week 14 notebook
+~~~~~~~~~~~~~~~~
+
+
+Sample quiz 
+~~~~~~~~~~~~~~
+
+NO quiz this week
+
+

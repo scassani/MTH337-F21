@@ -22,6 +22,9 @@ The last weekly summary google form is due on Sunday Dec 5 at midnight, and is a
 Week 14 notebook
 ~~~~~~~~~~~~~~~~
 
+- `View online <../_static/week14_in_class.html>`_
+- `Download  <../_static/week14_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
 
 Sample quiz 
 ~~~~~~~~~~~~~~

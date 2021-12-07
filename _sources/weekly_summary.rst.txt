@@ -1,6 +1,82 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 14
+~~~~~~~
+
+- How can you get all the first indexes of list elements?
+
+[k[0] for k in mylist]
+
+- Do we have a quiz next week or are we done?
+
+no quiz
+
+- When is the due date for Project 8 going to be?
+
+Sunday 12/12
+
+- using recursion, can you call the function more than once?
+
+In the function itself? Yes you can.
+
+- Can you explain how recursion functions in python work or give a resource that explains them?
+
+I think google shoud be helpful enough. The main idea is that the structure of the code has some repetitive algorithm, so for example you can use recursion instead of a loop
+
+- Will recursion need be used in the sudoku project?
+
+no, it is not necessary
+
+- Is recursion necessary to solve Sudokus of higher difficulty? I know you said in class that the more simple way has a limit, but could we modify it without recursion to handle more difficult problems?
+
+Technically yes, but for very hard sudokus recursion is the easiest solution.
+
+- Sometimes 'Autosave' does not work and it does not work even if I do manually. It shows there's an error message. Do you know how to get rid of that?
+
+When that happens ususally it means the kernel got somewhat corrupted. What I usually do is select all cells and copy them in a fresh notebook to avoid losing material
+
+- When we use the recursive function, should we define it outside of our main function, or it's ok to define in it?
+
+The recursion is ususally inside of the function
+
+- How can I enlarge the plot's title and the data points in the plot? I'm using pie graph to show the percentage of the first 20 words which have the most word frequency, but the percentage of each part are too small to see, it is not 'can't observe', it's I need to zoom in to see the actual data, which is really inconvenient.
+
+``fontsize`` should work.
+
+- I'm still unsure about when I need to apply recursion. Do you have any examples of when it would be needed?
+
+A very hard sudoku might need recursion.
+
+- Was this project language dependent? Can we reach the same conclusions to our analysis had we used a language other than English, assuming we are fluent in such said language?
+
+I have never tryed a different language. 
+
+- Will be any curve for the class?
+
+no
+
+- What specifically can you use `re.findall` with?
+
+with specific patterns you want to look for
+
+- How is it possible to use a function while defining the function?
+
+that is the recursion advantage.
+
+- Have we reached the goal for the surveys yet? :D
+
+yes!
+
+- Can we graph all of the words into one graph?
+
+yes, but you have to be careful to avoid the graph being very hard to read
+
+- How do we use sets and is the process of appending very similar or does python treat it differently.
+
+you can add to a set using ``set1.add(element)``
+
+
 Week 12
 ~~~~~~~
 

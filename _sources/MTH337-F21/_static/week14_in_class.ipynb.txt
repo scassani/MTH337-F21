@@ -1,0 +1,1416 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "4c0ad24b",
+   "metadata": {},
+   "source": [
+    "## Regular expressions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "f67fc4d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import re\n",
+    "import requests"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "f785d914",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'AROUND THE WORLD IN EIGHTY DAYS\\n\\n\\n\\nCONTENTS\\n\\n\\nCHAPTER\\n\\n      I  IN WHICH PHILEAS FOGG AND PASSEPARTOUT ACCEPT EACH OTHER, THE\\n         ONE AS MASTER, THE OTHER AS MAN\\n\\n     II  IN WHICH PASSEPARTOUT I'"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "link = \"https://scassani.github.io/MTH337-F21/_downloads/58e66eb33ff8fbf7872fbfb57be3f12c/around_world.txt\"\n",
+    "verne = requests.get(link).text\n",
+    "\n",
+    "verne[:200]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "35b57e4a",
+   "metadata": {},
+   "source": [
+    "**Ex.** Find all 5 letter words in the book (w/out regex)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "81fdbf9f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "verne_na=verne.replace(\"'\",\"\") # remove apostrophe\n",
+    "skip=\",.<>\\\"_-?!()[]{}=+*\\r\\n;:\"\n",
+    "\n",
+    "for char in skip:\n",
+    "    verne_na=verne_na.replace(char,\" \")\n",
+    "    \n",
+    "verne_l=verne_na.lower() # lowercase\n",
+    "\n",
+    "verne_list=verne_l.split()\n",
+    "    \n",
+    "wlist=[]\n",
+    "    \n",
+    "for word in verne_list:\n",
+    "    if len(word)==5:\n",
+    "        wlist.append(word)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "8043b376",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['world',\n",
+       " 'which',\n",
+       " 'other',\n",
+       " 'other',\n",
+       " 'which',\n",
+       " 'found',\n",
+       " 'ideal',\n",
+       " 'which',\n",
+       " 'takes',\n",
+       " 'place']"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "a11b4f3e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'around the'"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "verne=verne.lower()\n",
+    "verne[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6a676daa",
+   "metadata": {},
+   "source": [
+    "**Ex.** Find all 5 letter words in the book (w regex)\n",
+    "\n",
+    "* `\\b` word delimiter\n",
+    "* `\\w` character(letter,number,underscore)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "d11fb298",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['world',\n",
+       " 'which',\n",
+       " 'other',\n",
+       " 'other',\n",
+       " 'which',\n",
+       " 'found',\n",
+       " 'ideal',\n",
+       " 'which',\n",
+       " 'takes',\n",
+       " 'place']"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b\\w\\w\\w\\w\\w\\b\",verne)\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "d4d03f32",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['world',\n",
+       " 'which',\n",
+       " 'other',\n",
+       " 'other',\n",
+       " 'which',\n",
+       " 'found',\n",
+       " 'ideal',\n",
+       " 'which',\n",
+       " 'takes',\n",
+       " 'place']"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b\\w{5}\\b\",verne)\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7dc85dc1",
+   "metadata": {},
+   "source": [
+    "**Ex.** Find all 5 letter words in the book (w regex) starting with *i* ending with *t*\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "2c0d8e7f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['ingot', 'ingot', 'idiot']"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\bi\\w{3}t\\b\",verne)\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "afe3c7ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['ingot', 'ingot', 'idiot']"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\"\"\\b\n",
+    "                i\n",
+    "                \\w{3}\n",
+    "                t\n",
+    "                \\b\"\"\",verne,re.VERBOSE)\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "d87ca88c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['inhabit',\n",
+       " 'instant',\n",
+       " 'ingot',\n",
+       " 'ingot',\n",
+       " 'insist',\n",
+       " 'impart',\n",
+       " 'instant',\n",
+       " 'instant',\n",
+       " 'instant',\n",
+       " 'instant']"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\bi\\w{3,5}t\\b\",verne) # i; 3-5 chars; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "52d5fc57",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it',\n",
+       " 'it']"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\bi\\w{,5}t\\b\",verne) # i; 0-5 chars; t\n",
+    "wlist2[:20]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "f88d6204",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['interest',\n",
+       " 'itinerant',\n",
+       " 'inhabit',\n",
+       " 'instant',\n",
+       " 'ingot',\n",
+       " 'ingot',\n",
+       " 'incident',\n",
+       " 'intelligent',\n",
+       " 'impatient',\n",
+       " 'important']"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\bi\\w{3,}t\\b\",verne) # i; 3+ chars; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "17cab236",
+   "metadata": {},
+   "source": [
+    "`+`: matches one or more times"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "ff825b91",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['interest',\n",
+       " 'itinerant',\n",
+       " 'inhabit',\n",
+       " 'instant',\n",
+       " 'ingot',\n",
+       " 'ingot',\n",
+       " 'incident',\n",
+       " 'intelligent',\n",
+       " 'impatient',\n",
+       " 'important']"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\bi\\w+t\\b\",verne) # i; \\w one or more times; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "95421fbf",
+   "metadata": {},
+   "source": [
+    "`*`: matches zero or more times"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "5792bb47",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['it', 'interest', 'it', 'it', 'it', 'it', 'it', 'it', 'it', 'it']"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\bi\\w*t\\b\",verne) # i; \\w zero or more times; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "dbf762c4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['seems',\n",
+       " 'seeing',\n",
+       " 'seem',\n",
+       " 'speed',\n",
+       " 'succeed',\n",
+       " 'seemed',\n",
+       " 'seen',\n",
+       " 'been',\n",
+       " 'queen',\n",
+       " 'needed']"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b\\w*ee\\w*\\b\",verne) # i; \\w zero or more times; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "169898c1",
+   "metadata": {},
+   "source": [
+    "`[]` to include a list of characters to match"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "e291260e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['go', 'francisco', 'do', 'do', 'fro', 'go', 'do', 'go', 'go', 'francisco']"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b[bcdefghBCDEFGH]\\w{,8}o\\b\",verne) #\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "94853c32",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['go', 'francisco', 'do', 'do', 'fro', 'go', 'do', 'go', 'go', 'francisco']"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b[b-hB-H]\\w{,8}o\\b\",verne) # \n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4afcca3a",
+   "metadata": {},
+   "source": [
+    "`^` indicates characters that should not be matched (`\\W` represents the not a character)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "2478e190",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['to', 'to', 'to', 'to', 'too', 'to', 'to', 'to', 'to', 'too']"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b[^bcdefgh\\W]\\w{,8}o\\b\",verne) # \n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "44998269",
+   "metadata": {},
+   "source": [
+    "`\\d` digits"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "744a582c",
+   "metadata": {},
+   "source": [
+    "find all of the numbers in the book"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "1673f2a1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['1872', '7', '1814', '7', '13', '3', '13', '6', '22', '7']"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\"\\b\\d+\\b\",verne) # i; \\w zero or more times; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c8db1332",
+   "metadata": {},
+   "source": [
+    "`.` means anything (except newline)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f8a179be",
+   "metadata": {},
+   "source": [
+    "find all lines in the book with a number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "e95be45a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['mr. phileas fogg lived, in 1872, at no. 7, saville row, burlington',\n",
+       " 'gardens, the house in which sheridan died in 1814.  he was one of the',\n",
+       " 'almost superhumanly prompt and regular.  on this very 2nd of october he',\n",
+       " 'this wednesday, 2nd october, you are in my service.\"',\n",
+       " '    brindisi, by rail and steamboats .................  7 days',\n",
+       " '  from suez to bombay, by steamer .................... 13  \"',\n",
+       " '  from bombay to calcutta, by rail ...................  3  \"',\n",
+       " '  from calcutta to hong kong, by steamer ............. 13  \"',\n",
+       " '  from hong kong to yokohama (japan), by steamer .....  6  \"',\n",
+       " '  from yokohama to san francisco, by steamer ......... 22  \"']"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "wlist2=re.findall(r\".*\\d+.*\",verne) # i; \\w zero or more times; t\n",
+    "wlist2[:10]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5544e701",
+   "metadata": {},
+   "source": [
+    "note: `+` and `*` are greedy"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "9c4dcf3f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['7:00-8:00 AM and coffee at 10:00-11:30 AM']"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s=\"breakfast is served at 7:00-8:00 AM and coffee at 10:00-11:30 AM\"\n",
+    "\n",
+    "re.findall(r'\\d.+ AM',s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "301d3a45",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['7:00-8:00 AM', '10:00-11:30 AM']"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re.findall(r'\\d.+? AM',s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "c8681f7f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['convinced',\n",
+       " 'moneyed',\n",
+       " 'red',\n",
+       " 'ensued',\n",
+       " 'thinking',\n",
+       " 'seeing',\n",
+       " 'showing',\n",
+       " 'happened',\n",
+       " 'losing',\n",
+       " 'hundred',\n",
+       " 'during',\n",
+       " 'speed',\n",
+       " 'succeed',\n",
+       " 'making',\n",
+       " 'narrated']"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re.findall(r\"\\b(\\w*ing|\\w*ed)\\b\",verne)[:15] # | means `or`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "5b0a8535",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('convinced', 'ed'),\n",
+       " ('moneyed', 'ed'),\n",
+       " ('red', 'ed'),\n",
+       " ('ensued', 'ed'),\n",
+       " ('thinking', 'ing'),\n",
+       " ('seeing', 'ing'),\n",
+       " ('showing', 'ing'),\n",
+       " ('happened', 'ed'),\n",
+       " ('losing', 'ing'),\n",
+       " ('hundred', 'ed'),\n",
+       " ('during', 'ing'),\n",
+       " ('speed', 'ed'),\n",
+       " ('succeed', 'ed'),\n",
+       " ('making', 'ing'),\n",
+       " ('narrated', 'ed')]"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re.findall(r\"\\b(\\w*(ing|ed))\\b\",verne)[:15] # | means `or`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "33fec8ec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "link=\"http://www.buffalo.edu/cas/math/people/grad-directory.html\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "542a05f0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "gs=requests.get(link).text"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "b2e490d7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "k=gs.find(\"Abeya\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "4119c4bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'=\"onPasteFilterPlainText(event)\" id=\"title_3\"> A </h2></div><div class=\"text parbase section\"><p><b>Abeya Ranasinghe Mudiyanselage, Asela V.</b><br/> Office: 138&nbsp; Phone: 645-8823<br/> Email: <a href=\"mailto:aselavir@buffalo.edu\">aselavir@buffalo.edu</a></p><p><b>Ahn, Min Woong</b><br/> Office: '"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "gs[k-100:k+200]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "34acde35",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['<p><b>Abeya Ranasinghe Mudiyanselage, Asela V.</b><br/> Office: 138&nbsp; Phone: 645-8823<br/> Email: <a href=\"mailto:aselavir@buffalo.edu\">aselavir@buffalo.edu</a></p>',\n",
+       " '<p><b>Ahn, Min Woong</b><br/> Office: 126&nbsp; Phone: 645-8816<br/> Email:&nbsp;<a href=\"mailto:minwoong@buffalo.edu\">minwoong@buffalo.edu</a></p>',\n",
+       " '<p><b>Alegria, Linda</b><br/> Office: 138 Phone: 645-8823<br/> Email: <a href=\"mailto:lindaale@buffalo.edu\">lindaale@buffalo.edu</a><br/></p>',\n",
+       " '<p><b>Betz, Katherine</b><br/> Office: 132 Phone: 645-8820<br/> Email: <a href=\"mailto:kbetz2@buffalo.edu\">kbetz2@buffalo.edu</a></p>',\n",
+       " '<p><b>Bhaumik, Jnanajyoti</b><br/> Office: 129 Mathematics Building<br/> Phone: 645-8817<br/> Email: <a href=\"mailto:jnanajyo@buffalo.edu\">jnanajyo@buffalo.edu</a></p>',\n",
+       " '<p>&nbsp;</p>',\n",
+       " '<p><b>Cain Charles</b><br/> Email: <a href=\"mailto:ccain2@buffalo.edu\">ccain2@buffalo.edu</a></p>',\n",
+       " '<p><b>Casper, Michael<br/> </b> Office: 222&nbsp; Phone: 645-8779<br/> Email: <a href=\"mailto:mjcasper@buffalo.edu\">mjcasper@buffalo.edu</a></p>',\n",
+       " '<p><b>Chang, Hong<br/> </b> Office: 136 Phone: 645-8821<br/> Email: <a href=\"mailto:hchang24@buffalo.edu\">hchang24@buffalo.edu</a></p>',\n",
+       " '<p><b>Chen, Yen-Lin<br/> </b> Office: 125 Phone: 645-8815<br/> Email: <a href=\"mailto:yenlinch@buffalo.edu\">yenlinch@buffalo.edu</a><br/></p>',\n",
+       " '<p><b>Cheuk, Ka Yue<br/> </b> Office: 140 Phone: 645-8825<br/> Email: <a href=\"mailto:kayueche@buffalo.edu\">kayueche@buffalo.edu</a></p>',\n",
+       " '<p><b>Cosgrove, Gage (Makenzie)<br/> </b> Office: 139 Phone: 645-8824<br/> Email: <a href=\"mailto:gagecosg@buffalo.edu\">gagecosg@buffalo.edu</a></p>',\n",
+       " '<p>&nbsp;</p>',\n",
+       " '<p><b>Engelhardt, Carolyn<br/> </b> Email: <a href=\"mailto:cengelha@buffalo.edu\">cengelha@buffalo.edu</a><br/></p>',\n",
+       " '<p><b>Fonseca dos Reis, Elohim<br/> </b> Office: 313&nbsp; Phone: 645-8804<br/> Email: <a href=\"mailto:elohimfo@buffalo.edu\">elohimfo@buffalo.edu</a></p>',\n",
+       " '<p><b>Gkogkou, Aikaterini</b><br/> Office: 129&nbsp; Phone: 645-8817<br/> Email:&nbsp;<a href=\"mailto:agkogkou@buffalo.edu\">agkogkou@buffalo.edu</a></p>',\n",
+       " '<p><b>Haverlick. Justin<br/> </b> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:jmhaverl@buffalo.edu\">jmhaverl@buffalo.edu</a></p>',\n",
+       " '<p><b>Herron, Amy</b><br/> Office: 135&nbsp;&nbsp;<br/> Email:&nbsp;<a href=\"mailto:ajherron@buffalo.edu\">ajherron@buffalo.edu</a></p>',\n",
+       " '<p><b>Hovland, Seth</b><br/> Office: 130&nbsp; Phone: 645-8818<br/> Email: <a href=\"mailto:sethhovl@buffalo.edu\">sethhovl@buffalo.edu</a></p>',\n",
+       " '<p><b>Hung, Tsz Fun</b><br/> Office: 137&nbsp; Phone: 645-8822<br/> Email: <a href=\"mailto:tszfunhu@buffalo.edu\">tszfunhu@buffalo.edu</a></p>',\n",
+       " '<p><b>Hutchings, Raymond</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email:&nbsp;<a href=\"mailto:rhhutchi@buffalo.edu\">rhhutchi@buffalo.edu</a></p>',\n",
+       " '<p><b>Huynh, Bao<br/> </b> Office: 131 Phone: 645-8819<br/> Email: <a href=\"mailto:baohuynh@buffalo.edu\">baohuynh@buffalo.edu</a></p>',\n",
+       " '<p><b>Jeong, Myeongjin<br/> </b> Office: 244<br/> Email:<a href=\"mailto:mjeong31@buffalo.edu\">mjeong31@buffalo.edu</a></p>',\n",
+       " '<p><b>Jones, Raymond</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:rpjones2@buffalo.edu\">rpjones2@buffalo.edu</a></p>',\n",
+       " '<p><b>Kilic, Bengier Ulgen<br/> </b> Office: 106 Phone: 645-8763<br/> Email: <a href=\"mailto:bengieru@buffalo.edu\">bengieru@buffalo.edu</a></p>',\n",
+       " '<p><b>Kim, Jiseong<br/> </b> Office: 125 Phone: 645-8815<br/> Email: <a href=\"mailto:jiseongk@buffalo.edu\">jiseongk@buffalo.edu</a></p>',\n",
+       " '<p><b>Kireyev, Dmitri</b><br/> Office: 129&nbsp; Phone: 645-8817<br/> Email: <a href=\"mailto:dmitriki@buffalo.edu\">dmitriki@buffalo.edu</a><br/></p>',\n",
+       " '<p><b>Le, Minh Quang</b><br/> Office: 131&nbsp; Phone: 645-8819<br/> Email: <a href=\"mailto:minhquan@buffalo.edu\">minhquan@buffalo.edu</a></p>',\n",
+       " '<p><b>Leonard, Dakota</b><br/> Office: 131&nbsp; Phone: 645-8819<br/> Email: <a href=\"mailto:dl42@buffalo.edu\">dl42@buffalo.edu</a></p>',\n",
+       " '<p><b>Liao, Chang-Chih</b><br/> Office: 138&nbsp; Phone: 645-8823<br/> Email: <a href=\"mailto:cliao9@buffalo.edu\">cliao9@buffalo.edu</a></p>',\n",
+       " '<p><b>Liao, Yanzhan</b><br/> Office: 140 Phone: 645-8825<br/> Email: <a href=\"mailto:yanzhanl@buffalo.edu\">yanzhanl@buffalo.edu</a></p>',\n",
+       " '<p><b>Liu, Ruodan</b><br/> Office: 135 Phone: 645-8832<br/> Email: <a href=\"mailto:rliu8@buffalo.edu\">rliu8@buffalo.edu</a></p>',\n",
+       " '<p><b>Liu,Tianmou<br/> </b> Office: 136 Phone: 645-8821<br/> Email: <a href=\"mailto:tianmoul@buffalo.edu\">tianmoul@buffalo.edu</a></p>',\n",
+       " '<p><b>Liu, Yuan</b><br/> Office: 135 Phone: 645-8832<br/> Email: <a href=\"mailto:yuanliu@buffalo.edu\">yuanliu@buffalo.edu</a></p>',\n",
+       " '<p>&nbsp;</p>',\n",
+       " '<p><b>Ma, Ning<br/> </b> Office: 125&nbsp; Phone: 645-8815<br/> Email: <a href=\"mailto:nma22@buffalo.edu\">nma22@buffalo.edu</a><br/></p>',\n",
+       " '<p><b>Ma, Renda<br/> </b> Office: 125&nbsp; Phone: 645-8815<br/> Email: <a href=\"mailto:rendama@buffalo.edu\">rendama@buffalo.edu</a></p>',\n",
+       " '<p><b>Ma, Yuqing</b><br/> Office: 138&nbsp; Phone: 645-8823&nbsp;<br/> Email: <a href=\"mailto:yuqingma@buffalo.edu\">yuqingma@buffalo.edu</a></p>',\n",
+       " '<p><b>Meng, Lingqi<br/> </b> Office: 130 Phone: 645-8818<br/> Email: <a href=\"mailto:lingqime@buffalo.edu\">lingqime@buffalo.edu</a></p>',\n",
+       " '<p><b>Meyer, Drew</b><br/> Office: 137&nbsp; Phone: 645-8822<br/> Email: <a href=\"mailto:drewmeye@buffalo.edu\">drewmeye@buffalo.edu</a></p>',\n",
+       " '<p><b>Montoro, Michael<br/> </b> Office: 126&nbsp; Phone: 645-8816<br/> Email: <a href=\"mailto:mnmontor@buffalo.edu\">mnmontor@buffalo.edu</a></p>',\n",
+       " '<p><b>Moore, Robert</b><br/> Office: 139&nbsp; Phone: 645-8824<br/> Email: <a href=\"mailto:rcmoore@buffalo.edu\">rcmoore@buffalo.edu</a><br/></p>',\n",
+       " '<p><b>Nguyen, Khanh Truong</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:kn55@buffalo.edu\">kn55@buffalo.edu</a></p>',\n",
+       " '<p><b>Peng, Jun</b><br/> Office: 139 Phone: 645-8824<b><br/> </b> Email: <a href=\"mailto:jpeng3@buffalo.edu\">jpeng3@buffalo.edu</a></p>',\n",
+       " '<p><b>Poste, Alex</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:apposte@buffalo.edu\">apposte@buffalo.edu</a></p>',\n",
+       " '<p>&nbsp;</p>',\n",
+       " '<p><b>Rantanen, Matthew<br/> </b>Office: 130&nbsp; Phone: 645-8818<br/> Email: <a href=\"mailto:mattrant@buffalo.edu\">mattrant@buffalo.edu</a></p>',\n",
+       " '<p><b>Rele, Adhish</b><br/> Office: 140 Phone: 645-8825<br/> Email: <a href=\"mailto:adhishpr@buffalo.edu\">adhishpr@buffalo.edu</a></p>',\n",
+       " '<p><b>Roseman, Marleah</b><br/> Office: 137 Phone: 645-8822<br/> Email:&nbsp;<a href=\"mailto:mroseman@buffalo.edu\">mroseman@buffalo.edu</a> &nbsp;</p>',\n",
+       " '<p><b>Russell, Madison</b><br/> Office: 129&nbsp; Phone: 645-8817<br/> Email: <a href=\"mailto:merussel@buffalo.edu\">merussel@buffalo.edu</a></p>',\n",
+       " '<p><b>Rozwood, Bud<br/> </b> Office: 125 Phone: 645-8815<b><br/> </b> Email: <a href=\"mailto:budrozwo@buffalo.edu\">budrozwo@buffalo.edu</a></p>',\n",
+       " '<p><b>Sarkar, Sayantan<br/> </b> Office: 125&nbsp; Phone: 645-8815<br/> Email: <a href=\"mailto:sayantan@buffalo.edu\">sayantan@buffalo.edu</a></p>',\n",
+       " '<p><b>Schwartz, Hunter</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:haroldsc@buffalo.edu\">haroldsc@buffalo.edu</a></p>',\n",
+       " '<p><b>Sharma, Abhishek</b><br/> Office: 126&nbsp; &nbsp;Phone: 645-8816<br/> Email: <a href=\"mailto:aks28@buffalo.edu\">aks28@buffalo.edu</a></p>',\n",
+       " '<p><b>Sicuso, Luca</b><br/> Office: 131&nbsp; &nbsp;Phone: 645-8819<br/> Email: <a href=\"mailto:lucasicu@buffalo.edu\">lucasicu@buffalo.edu</a></p>',\n",
+       " '<p><b>Solanki, Deepisha</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:deepisha@buffalo.edu\">deepisha@buffalo.edu</a></p>',\n",
+       " '<p><b>Som, Bratati<br/> </b> Office: 132 Phone: 645-8820<br/> Email: <a href=\"mailto:bratatis@buffalo.edu\">bratatis@buffalo.edu</a></p>',\n",
+       " '<p><b>Song, Zhao<br/> </b> Office: 131 Phone: 645-8819<br/> Email: <a href=\"mailto:zhaosong@buffalo.edu\">zhaosong@buffalo.edu</a></p>',\n",
+       " '<p><b>Sullivan, Mark</b><br/> Office: 136&nbsp; Phone: 645-8821<br/> Email: <a href=\"mailto:marksull@buffalo.edu\">marksull@buffalo.edu</a></p>',\n",
+       " '<p><b>Sun, Yuxun</b><br/> Office: 137 Phone: 645-8822<br/> Email: <a href=\"mailto:yuxunsun@buffalo.edu\">yuxunsun@buffalo.edu</a></p>',\n",
+       " '<p><b>Thongprayoon, Chanon</b><br/> Office: 125&nbsp; Phone: 645-8815<br/> Email:&nbsp;<a href=\"mailto:chanonth@buffalo.edu\">chanonth@buffalo.edu</a><br/> <br/> <br/></p>',\n",
+       " '<p><b>Vadnere, Arya Abhijeet</b><br/> Office: 132 Mathematics Building<br/> Phone: 645-8820<br/> Email: <a href=\"mailto:aryaabhi@buffalo.edu\">aryaabhi@buffalo.edu</a></p>',\n",
+       " '<p><b>Vinal, Gregory<br/> </b> Office: 126&nbsp; Phone: 645-8816<br/> Email: <a href=\"mailto:chanonth@buffalo.edu\">gregoryv@buffalo.edu</a></p>',\n",
+       " '<p>&nbsp;</p>',\n",
+       " '<p><b>Wang, Daxun<br/> </b>Office: 141 Phone: 645-8825<br/> Email: <a href=\"mailto:daxunwan@buffalo.edu\">daxunwan@buffalo.edu</a></p>',\n",
+       " '<p><b>Wang, Shiruo<br/> </b> Office: 125 Phone: 645-8815<br/> Email: <a href=\"mailto:bwang32@buffalo.edu\">shiruowa@buffalo.edu</a></p>',\n",
+       " '<p><b>Yuan, Cheng</b><br/> Office: 137&nbsp; Phone: 645-8822<br/> Email: <a href=\"mailto:chengyua@buffalo.edu\">chengyua@buffalo.edu</a></p>',\n",
+       " '<p><b>Zhang, Baoming</b><br/> Office: 140 Phone: 645-8825<br/> Email: <a href=\"mailto:baomingz@buffalo.edu\">baomingz@buffalo.edu</a></p>',\n",
+       " '<p><b>Zhao, Bojun</b><br/> Office: 140 Phone: 645-8825<br/> Email: <a href=\"mailto:bojunzha@buffalo.edu\">bojunzha@buffalo.edu</a></p>',\n",
+       " '<p><b>Ziegler, Cameron</b><br/> Office: 140&nbsp; Phone: 645-8825<br/> Email: <a href=\"mailto:cz22@buffalo.edu\">cz22@buffalo.edu</a></p>',\n",
+       " '<p>244 Mathematics Building<br/> Buffalo, NY 14260-2900<br/> Phone: (716) 645-6284<br/> Fax: (716) 645-5039</p>',\n",
+       " '<p><b>About Our Photos and Videos:</b>&nbsp;Some photos or videos that appear on this site may have been taken prior to the COVID-19 pandemic and therefore may not accurately reflect current operations or adherence to <a href=\"https://www.buffalo.edu/coronavirus/health-and-safety.html\" target=\"_blank\">UB&rsquo;s Health and Safety Guidelines</a>.<br/></p>']"
+      ]
+     },
+     "execution_count": 62,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re.findall(r\"<p>.+?</p>\",gs)[4:]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1d90b4a0",
+   "metadata": {},
+   "source": [
+    "## Sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "eb3ef0d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'b', 'c'}"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1={'a','b','c','c'}\n",
+    "set1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "3a18b0ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not subscriptable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-2-c38563f1af7a>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mset1\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not subscriptable"
+     ]
+    }
+   ],
+   "source": [
+    "set1[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "5090409b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a\n",
+      "c\n",
+      "b\n"
+     ]
+    }
+   ],
+   "source": [
+    "for elem in set1:\n",
+    "    print(elem)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "0437f383",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{' ', 'e', 'k', 'n', 'o', 'r', 'w', 'y'}"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set('new york')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "074f32bc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'd', 'i', 'n'}"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set2=set(\"indiana\")\n",
+    "set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "819878dd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"i\" in set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "a73a2ede",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from time import time"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "e10a6e86",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist=range(10**8)\n",
+    "myset=set(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "c9533110",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "100000000 False\n",
+      "100000001 False\n",
+      "100000002 False\n",
+      "100000003 False\n",
+      "100000004 False\n",
+      "100000005 False\n",
+      "100000006 False\n",
+      "100000007 False\n",
+      "100000008 False\n",
+      "100000009 False\n",
+      "0.0019271373748779297\n"
+     ]
+    }
+   ],
+   "source": [
+    "startt=time()\n",
+    "for k in range(10**8,10**8+10):\n",
+    "    print(k, k in mylist)\n",
+    "endt=time()\n",
+    "print(endt-startt)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "4e376e68",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "100000000 False\n",
+      "100000001 False\n",
+      "100000002 False\n",
+      "100000003 False\n",
+      "100000004 False\n",
+      "100000005 False\n",
+      "100000006 False\n",
+      "100000007 False\n",
+      "100000008 False\n",
+      "100000009 False\n",
+      "0.0006470680236816406\n"
+     ]
+    }
+   ],
+   "source": [
+    "startt=time()\n",
+    "for k in range(10**8,10**8+10):\n",
+    "    print(k, k in myset)\n",
+    "endt=time()\n",
+    "print(endt-startt)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "18d19985",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "set1={'a','b','c','d'}\n",
+    "set2={'a','b','e','f'}\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "9704f4eb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'b', 'c', 'd', 'e', 'f'}"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# union\n",
+    "set1|set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "36e9dd39",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'b'}"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# intersection\n",
+    "set1&set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "4ea6d2ef",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'c', 'd'}"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# difference\n",
+    "set1-set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "7b8142fa",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'e', 'f'}"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set2-set1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "f83427ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'c', 'd', 'e', 'f'}"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1^set2 # symm. difference"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "9d80ff94",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'b', 'c', 'd', 'h'}"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.add('h')\n",
+    "set1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "f2c978bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'c', 'd', 'h'}"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.discard('b')\n",
+    "set1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "10e22c14",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'h'"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.pop()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2a05c724",
+   "metadata": {},
+   "source": [
+    "## recursion"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "1758c1bb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def factorial(n):\n",
+    "    if n<=1:\n",
+    "        return 1\n",
+    "    else:\n",
+    "        return n*factorial(n-1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "114f9d8d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "120"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "factorial(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "edf41f66",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def delivery_recursive(mylist):\n",
+    "    if len(mylist)==0:\n",
+    "        print(\"No delivery\")\n",
+    "    elif len(mylist)==1:\n",
+    "        print(f'delivering to {mylist[0]}\\'s house')\n",
+    "    else:\n",
+    "        k = len(mylist)//2 # middle of list\n",
+    "        mylist1=mylist[:k]\n",
+    "        mylist2=mylist[k:]\n",
+    "        delivery_recursive(mylist1)\n",
+    "        delivery_recursive(mylist2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "d9c2adef",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "delivering to Simone's house\n",
+      "delivering to Bonnie's house\n",
+      "delivering to Laney's house\n",
+      "delivering to Gabe's house\n",
+      "delivering to Charles's house\n"
+     ]
+    }
+   ],
+   "source": [
+    "mylist=[\"Simone\",\"Bonnie\",\"Laney\",\"Gabe\",\"Charles\"]\n",
+    "delivery_recursive(mylist)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9448662c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
